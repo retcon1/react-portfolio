@@ -1,9 +1,7 @@
 import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Ben from "../img/ben-ai.jpeg";
-import sideWave from "../img/wave.svg";
+import Ben from "../img/ben.jpeg";
 import React from "react";
-import Wave from "react-wavify";
 import { Reveal, LeftReveal } from "./utils/Reveals";
 
 function Hello() {
@@ -13,9 +11,9 @@ function Hello() {
         <div className="left-header">
           {/* <img src={sideWave} alt="" className="side-wave" /> */}
           <div className="parallax image">
-            {/* <LeftReveal>
+            <LeftReveal>
               <img src={Ben} alt="picture of Ben Lucas" className="parallax" />
-            </LeftReveal> */}
+            </LeftReveal>
           </div>
         </div>
         <div className="right-header">
