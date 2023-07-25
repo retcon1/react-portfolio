@@ -10,7 +10,7 @@ function WaveTransition() {
           fill="#ffffff"
           paused={false}
           options={{
-            height: 10,
+            height: 40,
             amplitude: 20,
             speed: 0.25,
             points: 3,
@@ -19,10 +19,10 @@ function WaveTransition() {
       <Wave
         className="wave"
         style={{ zIndex: 1 }}
-        fill="#3f9dd0"
+        fill="#303F9F"
         paused={false}
         options={{
-          height: 50,
+          height: 70,
           amplitude: 20,
           speed: 0.25,
           points: 3,

@@ -9,22 +9,21 @@ function Hello() {
     <header className="section sec1 header active" id="home">
       <div className="header-content">
         <div className="left-header">
-          {/* <img src={sideWave} alt="" className="side-wave" /> */}
-          <div className="parallax image">
-            <LeftReveal>
-              <img src={Ben} alt="picture of Ben Lucas" className="parallax" />
-            </LeftReveal>
-          </div>
+          <LeftReveal>
+            <div className="image">
+              <img src={Ben} alt="picture of Ben Lucas" />
+            </div>
+          </LeftReveal>
         </div>
         <div className="right-header">
           <Reveal>
-            <h1 className="parallax name">
+            <h1 className="name">
               Hi, I'm <span className="name">Ben Lucas</span> <br />A Full-Stack
               JavaScript Developer.
             </h1>
           </Reveal>
           <Reveal>
-            <p className="parallax">
+            <p>
               I'm a determined problem solver, putting my natural instincts into
               action through
               <span className="highlight"> JavaScript Development.</span> I'm
