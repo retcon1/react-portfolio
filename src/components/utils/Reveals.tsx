@@ -106,7 +106,7 @@ export const AltReveal = ({ children, width = "fit-content" }: Props) => {
   );
 };
 
-export const LeftReveal = ({ children, width = "fit-content" }: Props) => {
+export const LeftReveal = ({ children }: Props) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -120,18 +120,17 @@ export const LeftReveal = ({ children, width = "fit-content" }: Props) => {
   }, [isInView]);
 
   return (
-    <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
-      <motion.div
-        variants={{
-          hidden: { opacity: 0, x: -75 },
-          visible: { opacity: 1, x: 0 },
-        }}
-        initial="hidden"
-        animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.25 }}
-      >
-        {children}
-      </motion.div>
-    </div>
+    <motion.div
+      ref={ref}
+      variants={{
+        hidden: { opacity: 0, x: -75 },
+        visible: { opacity: 1, x: 0 },
+      }}
+      initial="hidden"
+      animate={mainControls}
+      transition={{ duration: 0.8, delay: 0.25 }}
+    >
+      {children}
+    </motion.div>
   );
 };
