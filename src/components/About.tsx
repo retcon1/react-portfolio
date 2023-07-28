@@ -1,11 +1,16 @@
 import React from "react";
-import { Reveal } from "./utils/Reveals";
+import { LeftReveal, Reveal, RightReveal } from "./utils/Reveals";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFileArrowDown,
+  faLayerGroup,
+} from "@fortawesome/free-solid-svg-icons";
 
 function About() {
   return (
-    <section className="about-section">
+    <section className="about-page">
       <div className="main-title">
-        <Reveal>
+        <LeftReveal>
           <h2>
             About <span>me</span>
             <span className="bg-text">
@@ -13,21 +18,81 @@ function About() {
               stats
             </span>
           </h2>
-        </Reveal>
+        </LeftReveal>
       </div>
       <div className="about-container">
-        <p>
-          After years of being passionate about technology, from gaming to PC
-          building, video production and beyond, my innate desire to help people
-          solve their problems with tech has brought me to coding; the place
-          where I can make the biggest difference for the most amount of people!
-          <br />
-          <br />
-          Now, after diving in head-first through the Northcoders Software
-          Development Bootcamp, I'm training every day to become a better
-          programmer to help people like
-          <span className="highlight"> you</span> achieve their goals faster.
-        </p>
+        <div className="left-about">
+          <Reveal color="var(--color-accent)">
+            <h4>My Timeline</h4>
+          </Reveal>
+          <div className="timeline-item">
+            <div className="tl-icon">
+              <FontAwesomeIcon icon={faLayerGroup} />
+            </div>
+            <p className="tl-duration">2023 Feb - May</p>
+            <h5>
+              Full Stack Developer Student<span> - Northcoders</span>
+            </h5>
+            <p>
+              A 13 week, full-time bootcamp in which I learned JavaScript
+              programming in a test driven development environment. I completed
+              a solo project which included back-end development utilising
+              <span className="alt-highlight"> Express.js</span> and
+              <span className="alt-highlight"> SQL</span>, front-end development
+              using
+              <span className="alt-highlight"> React</span>,
+              <span className="alt-highlight"> Tailwind CSS</span>,
+              <span className="alt-highlight"> Material UI</span> and
+              <span className="alt-highlight"> Axios</span>. Culminating in a
+              group project with 5 other wonderful devs, in which we built an
+              online raiding game, using{" "}
+              <span className="alt-highlight">TypeScript</span>,
+              <span className="alt-highlight"> PassportJS</span>,
+              <span className="alt-highlight"> MongoDB</span> and
+              <span className="alt-highlight"> React Native Expo</span>.
+            </p>
+          </div>
+        </div>
+        <div className="right-about">
+          <Reveal color="var(--color-accent)">
+            <h4>
+              Get To Know <span className="alt-highlight">Me</span>
+            </h4>
+          </Reveal>
+          <Reveal color="var(--color-accent)">
+            <p>
+              After years of being passionate about technology, from gaming to
+              PC building, video production and beyond, my innate desire to help
+              people solve their problems with tech has brought me to coding;
+              the place where I can make the biggest difference for the most
+              amount of people!
+              <br />
+              <br />
+              Now, after diving in head-first through the Northcoders Software
+              Development Bootcamp, I'm training every day to become a better
+              programmer to help people like
+              <span className="alt-highlight"> you</span> achieve their goals
+              faster.
+            </p>
+          </Reveal>
+          <div className="btn-container">
+            <a
+              href="https://drive.google.com/file/d/1pYmmJDh9zVLBQQJrviycOZwC6yvJItLY/view?usp=sharing"
+              className="main-btn"
+              target="_blank"
+            >
+              <span className="btn-text">Download CV</span>
+              <span className="btn-icon">
+                <FontAwesomeIcon icon={faFileArrowDown} />
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="skills">
+        <Reveal color="var(--color-accent)" width="100%">
+          <h4>My Skills</h4>
+        </Reveal>
       </div>
     </section>
   );
