@@ -8,7 +8,7 @@
 }
 
 :root {
-  --color-primary: rgb(7, 11, 34);
+  --color-primary: #070b22;
   --color-secondary: #3f9dd0;
   --color-accent: #ff8963;
   --color-titles: #ffffff;
@@ -206,7 +206,7 @@ section {
   position: relative;
   z-index: auto;
   background-color: #2d3673;
-  padding-bottom: 5rem;
+  padding-bottom: 8rem;
   .about-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -365,48 +365,7 @@ section {
       }
     }
   }
-
-  .about-stats {
-    padding-bottom: 2rem;
-    .skill-icons {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      justify-content: center;
-      align-items: center;
-      font-size: 2rem;
-      .skill-icon {
-        color: var(--color-secondary);
-        margin: 15px 15px;
-        img {
-          margin-top: 12px;
-          width: 64px;
-          height: 64px;
-        }
-      }
-    }
-  }
-
-  .stat-title {
-    padding-top: 3rem;
-    text-transform: uppercase;
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 10px;
-    //   position: relative;
-    //   &::before {
-    //     content: "";
-    //     position: absolute;
-    //     left: 50%;
-    //     top: 0;
-    //     width: 40%;
-    //     height: 1px;
-    //     background-color: var(--color-grey-5);
-    //     transform: translateX(-50%);
-    //   }
-  }
 }
-
-// Timeline
 
 // Portfolios
 
