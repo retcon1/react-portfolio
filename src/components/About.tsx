@@ -5,6 +5,7 @@ import {
   faFileArrowDown,
   faLayerGroup,
 } from "@fortawesome/free-solid-svg-icons";
+import Tech from "./Tech";
 
 function About() {
   return (
@@ -25,32 +26,37 @@ function About() {
           <Reveal color="var(--color-accent)">
             <h4>My Timeline</h4>
           </Reveal>
-          <div className="timeline-item">
+          <div className="last-item">
             <div className="tl-icon">
               <FontAwesomeIcon icon={faLayerGroup} />
             </div>
             <p className="tl-duration">2023 Feb - May</p>
-            <h5>
-              Full Stack Developer Student<span> - Northcoders</span>
-            </h5>
-            <p>
-              A 13 week, full-time bootcamp in which I learned JavaScript
-              programming in a test driven development environment. I completed
-              a solo project which included back-end development utilising
-              <span className="alt-highlight"> Express.js</span> and
-              <span className="alt-highlight"> SQL</span>, front-end development
-              using
-              <span className="alt-highlight"> React</span>,
-              <span className="alt-highlight"> Tailwind CSS</span>,
-              <span className="alt-highlight"> Material UI</span> and
-              <span className="alt-highlight"> Axios</span>. Culminating in a
-              group project with 5 other wonderful devs, in which we built an
-              online raiding game, using{" "}
-              <span className="alt-highlight">TypeScript</span>,
-              <span className="alt-highlight"> PassportJS</span>,
-              <span className="alt-highlight"> MongoDB</span> and
-              <span className="alt-highlight"> React Native Expo</span>.
-            </p>
+            <Reveal color="var(--color-accent)">
+              <h5>
+                Full Stack Developer Student<span> - Northcoders</span>
+              </h5>
+            </Reveal>
+            <Reveal color="var(--color-accent)">
+              <p>
+                A 13 week, full-time bootcamp in which I learned JavaScript
+                programming in a test driven development environment. I
+                completed a solo project which included back-end development
+                utilising
+                <span className="alt-highlight"> Express.js</span> and
+                <span className="alt-highlight"> SQL</span>, front-end
+                development using
+                <span className="alt-highlight"> React</span>,
+                <span className="alt-highlight"> Tailwind CSS</span>,
+                <span className="alt-highlight"> Material UI</span> and
+                <span className="alt-highlight"> Axios</span>. Culminating in a
+                group project with 5 other wonderful devs, in which we built an
+                online raiding game, using{" "}
+                <span className="alt-highlight">TypeScript</span>,
+                <span className="alt-highlight"> PassportJS</span>,
+                <span className="alt-highlight"> MongoDB</span> and
+                <span className="alt-highlight"> React Native Expo</span>.
+              </p>
+            </Reveal>
           </div>
         </div>
         <div className="right-about">
@@ -75,24 +81,29 @@ function About() {
               faster.
             </p>
           </Reveal>
-          <div className="btn-container">
-            <a
-              href="https://drive.google.com/file/d/1pYmmJDh9zVLBQQJrviycOZwC6yvJItLY/view?usp=sharing"
-              className="main-btn"
-              target="_blank"
-            >
-              <span className="btn-text">Download CV</span>
-              <span className="btn-icon">
-                <FontAwesomeIcon icon={faFileArrowDown} />
-              </span>
-            </a>
-          </div>
+          <RightReveal>
+            <div className="btn-container">
+              <a
+                href="https://drive.google.com/file/d/1pYmmJDh9zVLBQQJrviycOZwC6yvJItLY/view?usp=sharing"
+                className="main-btn"
+                target="_blank"
+              >
+                <span className="btn-text">Download CV</span>
+                <span className="btn-icon">
+                  <FontAwesomeIcon icon={faFileArrowDown} />
+                </span>
+              </a>
+            </div>
+          </RightReveal>
         </div>
       </div>
       <div className="skills">
-        <Reveal color="var(--color-accent)" width="100%">
+        <RightReveal>
           <h4>My Skills</h4>
-        </Reveal>
+        </RightReveal>
+        <div className="tech-container">
+          <Tech />
+        </div>
       </div>
     </section>
   );

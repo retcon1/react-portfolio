@@ -43,7 +43,7 @@
 
 body {
   background-color: var(--color-primary);
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1.1rem;
   color: var(--color-white);
   transition: var(--transition);
@@ -59,7 +59,7 @@ a {
 header {
   margin-top: 10px;
   min-height: 100vh;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   color: var(--color-white);
   overflow: hidden;
 }
@@ -195,7 +195,7 @@ section {
   .wave {
     position: absolute;
     width: 100%;
-    bottom: -90px;
+    bottom: -80px;
     left: 0;
   }
 }
@@ -206,14 +206,23 @@ section {
   position: relative;
   z-index: auto;
   background-color: #2d3673;
+  padding-bottom: 5rem;
   .about-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-bottom: 3rem;
     .left-about {
+      padding-right: 5rem;
       h4 {
         padding-bottom: 2rem;
+        font-size: 2rem;
+        text-transform: uppercase;
+      }
+      p {
+        line-height: 2rem;
+        padding: 1rem;
+        color: var(--color-grey-1);
       }
       .timeline-item {
         position: relative;
@@ -260,15 +269,66 @@ section {
           font-size: 16px;
         }
       }
-      padding-right: 5rem;
-      p {
-        line-height: 2rem;
-        padding: 1rem;
-        color: var(--color-grey-1);
-      }
-      h4 {
-        font-size: 2rem;
-        text-transform: uppercase;
+      .last-item {
+        position: relative;
+        padding-left: 3rem;
+        border-left: 1px solid transparent;
+
+        // gradient line
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -2px; /* Adjust this value to position the gradient line */
+          height: 100%;
+          width: 1px;
+          background-image: linear-gradient(
+            to bottom,
+            var(--color-white),
+            transparent
+          );
+          z-index: 0; /* Place the pseudo-element behind the content */
+        }
+        .tl-icon {
+          position: absolute;
+          left: -27px;
+          top: 0;
+          background-color: var(--color-secondary);
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          i {
+            font-size: 1.3rem;
+          }
+        }
+        .tl-duration {
+          padding: 0.2rem 0.6rem;
+          background-color: var(--color-grey-1);
+          border-radius: 20px;
+          display: inline-block;
+          font-size: 0.8rem;
+          text-transform: uppercase;
+          font-weight: 500;
+          color: var(--color-grey-6);
+        }
+        h5 {
+          padding: 1rem 0;
+          text-transform: uppercase;
+          font-size: 1.5rem;
+          font-weight: 600;
+          span {
+            color: var(--color-grey-1);
+            font-weight: 500;
+            font-size: 1.2rem;
+          }
+        }
+        p {
+          color: var(--color-grey-1);
+          font-size: 16px;
+        }
       }
     }
     .right-about {
@@ -281,14 +341,28 @@ section {
       }
       p {
         padding-bottom: 2rem;
+        line-height: 2rem;
       }
     }
   }
   .skills {
-    grid-template-columns: 1fr;
     h4 {
+      text-transform: uppercase;
       font-size: 2rem;
       text-align: center;
+      padding-bottom: 1rem;
+    }
+    .tech-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 2rem;
+      .ball-canvas {
+        width: 140px; /* Adjust the width of each ball */
+        height: 140px; /* Adjust the height of each ball */
+        margin: -5px;
+      }
     }
   }
 
@@ -579,8 +653,8 @@ section {
       color: #ff8963;
     }
     .bg-text {
-      padding: 10rem 0;
-      opacity: 50%;
+      line-height: 9rem;
+      opacity: 70%;
       position: absolute;
       top: 50%;
       left: 50%;
