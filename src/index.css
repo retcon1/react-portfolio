@@ -2,7 +2,7 @@
 
 body {
   background-color: var(--color-primary);
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1.1rem;
   color: var(--color-white);
 }
