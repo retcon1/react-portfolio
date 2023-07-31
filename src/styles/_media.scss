@@ -1,4 +1,10 @@
 @media screen and (max-width: 1600px) {
+  .header-content {
+    .right-header {
+      padding-right: 15rem;
+    }
+  }
+
   .contact-content-con {
     flex-direction: column;
     .right-contact {
@@ -23,6 +29,12 @@
 
   section {
     padding: 7rem 9rem;
+  }
+
+  .header-content {
+    .right-header {
+      padding-right: 10rem;
+    }
   }
 }
 

@@ -174,7 +174,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-right: 18rem;
+    padding-right: 20rem;
     .name {
       font-size: 3rem;
       span {
@@ -212,6 +212,10 @@ section {
     grid-template-columns: repeat(2, 1fr);
     padding-top: 5rem;
     padding-bottom: 3rem;
+    .sub-title {
+      display: flex;
+      justify-content: center;
+    }
     .left-about {
       padding-right: 5rem;
       h4 {
@@ -337,7 +341,6 @@ section {
         padding-bottom: 2rem;
         font-size: 2rem;
         text-transform: uppercase;
-        // width:min-content;
       }
       p {
         padding-bottom: 2rem;
