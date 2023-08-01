@@ -24,3 +24,5 @@ yarn-error.log*
 
 *.jpeg
 *.jpg
+
+/src/img

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import port1 from "../img/port1.png";
-import port2 from "../img/port2.png";
+import port1 from "../img/port01.png";
+import port2 from "../img/port02.png";
 import { Tilt } from "react-tilt";
 import { motion, AnimatePresence } from "framer-motion";
 import Modal from "./Modal";
