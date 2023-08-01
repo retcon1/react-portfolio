@@ -1,4 +1,10 @@
 @media screen and (max-width: 1600px) {
+  .header-content {
+    .right-header {
+      padding-right: 15rem;
+    }
+  }
+
   .contact-content-con {
     flex-direction: column;
     .right-contact {
@@ -23,6 +29,12 @@
 
   section {
     padding: 7rem 9rem;
+  }
+
+  .header-content {
+    .right-header {
+      padding-right: 10rem;
+    }
   }
 }
 
@@ -121,17 +133,16 @@
       }
     }
   }
+  .portfolios {
+    grid-template-columns: 1fr !important;
+    padding-bottom: 6rem;
+    margin-top: 1rem;
+  }
 }
 
 @media screen and (max-width: 700px) {
   section {
     padding: 3rem 3rem;
-  }
-
-  .about-stats {
-    .progress-bars {
-      grid-template-columns: 1fr;
-    }
   }
 
   .timeline {
@@ -150,12 +161,6 @@
 }
 
 @media (max-width: 600px) {
-  .portfolios {
-    grid-template-columns: 1fr !important;
-    padding-bottom: 6rem;
-    margin-top: 1rem;
-  }
-
   section {
     padding: 2rem 2.5rem;
   }

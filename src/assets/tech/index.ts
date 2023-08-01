@@ -40,6 +40,10 @@ export const technologies = [
     icon: nodejs,
   },
   {
+    name: "PSQL",
+    icon: psql,
+  },
+  {
     name: "MongoDB",
     icon: mongodb,
   },
@@ -50,9 +54,5 @@ export const technologies = [
   {
     name: "git",
     icon: git,
-  },
-  {
-    name: "PSQL",
-    icon: psql,
   },
 ];

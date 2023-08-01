@@ -1,4 +1,3 @@
-import React from "react";
 import { LeftReveal, Reveal, RightReveal } from "./utils/Reveals";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -23,9 +22,11 @@ function About() {
       </div>
       <div className="about-container">
         <div className="left-about">
-          <Reveal color="var(--color-accent)">
-            <h4>My Timeline</h4>
-          </Reveal>
+          <div className="sub-title">
+            <Reveal color="var(--color-accent)">
+              <h4>My Timeline</h4>
+            </Reveal>
+          </div>
           <div className="last-item">
             <div className="tl-icon">
               <FontAwesomeIcon icon={faLayerGroup} />
@@ -60,11 +61,13 @@ function About() {
           </div>
         </div>
         <div className="right-about">
-          <Reveal color="var(--color-accent)">
-            <h4>
-              Get To Know <span className="alt-highlight">Me</span>
-            </h4>
-          </Reveal>
+          <div className="sub-title">
+            <Reveal color="var(--color-accent)">
+              <h4>
+                Get To Know <span className="alt-highlight">Me</span>
+              </h4>
+            </Reveal>
+          </div>
           <Reveal color="var(--color-accent)">
             <p>
               After years of being passionate about technology, from gaming to
@@ -101,9 +104,11 @@ function About() {
         <RightReveal>
           <h4>My Skills</h4>
         </RightReveal>
-        <div className="tech-container">
-          <Tech />
-        </div>
+        <LeftReveal>
+          <div className="tech-container">
+            <Tech />
+          </div>
+        </LeftReveal>
       </div>
     </section>
   );

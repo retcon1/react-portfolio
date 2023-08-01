@@ -1,7 +1,11 @@
 import React from "react";
 import Wave from "react-wavify";
 
-function WaveTransition() {
+interface WaveProps {
+  color: string;
+}
+
+function WaveTransition({ color }: WaveProps) {
   return (
     <div className="wave-transition">
       <Wave
@@ -19,7 +23,7 @@ function WaveTransition() {
       <Wave
         className="wave"
         style={{ zIndex: 1 }}
-        fill="#2d3673"
+        fill={color}
         paused={false}
         options={{
           height: 70,
