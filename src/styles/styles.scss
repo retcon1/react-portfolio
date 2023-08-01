@@ -373,8 +373,10 @@ section {
 // Portfolios
 
 .port-text {
-  padding-top: 5rem;
+  padding-top: 4rem;
   text-align: center;
+  font-weight: 800;
+  font-size: 1.5rem;
 }
 
 .portfolios {
@@ -383,71 +385,86 @@ section {
   grid-gap: 2rem;
   margin-top: 3rem;
   .portfolio-item {
+    cursor: pointer;
+    pointer-events: all;
+    margin: 0 2rem;
     position: relative;
     border-radius: 15px;
     img {
       width: 100%;
-      // height: 300px;
+      height: 400px;
       object-fit: cover;
       border-radius: 15px;
     }
-    .hover-items {
-      width: 100%;
-      height: 100%;
-      background-color: var(--color-secondary);
-      position: absolute;
-      left: 0;
-      top: 0;
-      border-radius: 15px;
+  }
+  .modal {
+    padding: 1rem 2rem;
+    width: clamp(50%, 700px, 90%);
+    height: min(50%, 370px);
+    background: var(--color-accent);
+    background: linear-gradient(
+      var(--color-accent) 40%,
+      var(--color-primary) 100%
+    );
+    border-radius: 50px;
+    z-index: 3;
+    overflow: scroll;
+    h3 {
+      text-transform: uppercase;
+      font-size: 2rem;
+      margin: 0.5rem 0;
+      text-align: center;
+    }
+    p {
+      margin: 1rem 0;
+      font-size: 1rem;
+      text-align: center;
+    }
+    .tech {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      p {
+        margin: 0.4rem 0.3rem;
+        padding: 0.2rem 0.6rem;
+        background-color: var(--color-grey-1);
+        border-radius: 20px;
+        display: inline-block;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: var(--color-black);
+      }
+    }
+    .icons {
       display: flex;
       justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      opacity: 0;
-      transform: scale(0);
-      transition: var(--transition);
-      h3 {
-        font-size: 1.5rem;
-        color: #ffffff;
-        margin-bottom: 1.5rem;
-        text-align: center;
-      }
-      .icons {
+      .icon {
+        background-color: var(--color-primary);
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
         display: flex;
-        justify-content: center;
         align-items: center;
-        .icon {
-          background-color: var(--color-primary);
-          border-radius: 50%;
-          width: 50px;
-          height: 50px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: 0 1rem;
-          cursor: pointer;
-          transition: var(--transition);
-          i {
-            font-size: 1.5rem;
-            color: var(--color-white);
-            margin: 0 1rem;
-          }
+        justify-content: center;
+        margin: 0 1rem;
+        cursor: pointer;
+        transition: var(--transition);
+        .i {
+          font-size: 5rem;
+          color: var(--color-white);
+          margin: 0 0.5rem;
+        }
 
-          &:hover {
-            background-color: var(--color-white);
-            i {
-              color: var(--color-primary);
-            }
+        &:hover {
+          background-color: var(--color-white);
+          .i {
+            color: var(--color-primary);
           }
         }
       }
     }
   }
-}
-
-.portfolio-item:hover .hover-items {
-  opacity: 1;
-  transform: scale(1);
 }
 
 // Contact Section
@@ -611,6 +628,7 @@ section {
     text-transform: uppercase;
     font-size: 4rem;
     font-weight: 700;
+    white-space: nowrap;
     span {
       color: #ff8963;
     }
@@ -628,6 +646,19 @@ section {
       margin-top: 0.3rem;
     }
   }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 2;
+  width: 100%;
+  background: #000000e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @import "./media";

@@ -1,4 +1,3 @@
-import React from "react";
 import "./styles/styles.scss";
 import Hello from "./components/Hello";
 import WaveTransition from "./components/WaveTransition";
@@ -12,6 +11,7 @@ function App() {
       <WaveTransition color="#2d3673" />
       <About />
       <WaveTransition color="#070b22" />
+      <Portfolio />
     </div>
   );
 }
