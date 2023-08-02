@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Backdrop from "./Backdrop";
+import { ImCross } from "react-icons/im";
 
 const dropIn = {
   hidden: {
@@ -39,6 +40,7 @@ function Modal({ handleClose, content }: ModalProps) {
         animate="visible"
         exit="exit"
       >
+        <ImCross className="exit" onClick={handleClose} />
         {content}
       </motion.div>
     </Backdrop>
