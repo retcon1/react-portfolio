@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import port1 from "../img/port01.png";
 import port2 from "../img/port02.png";
 import { Tilt } from "react-tilt";
-import { motion, AnimatePresence } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import Modal from "./Modal";
 import { AiFillGithub } from "react-icons/ai";
 import { BiSolidDice6, BiLogoYoutube } from "react-icons/bi";
@@ -25,156 +30,159 @@ function Portfolio() {
   const close = () => setModalOpen(0);
   const open1 = () => setModalOpen(1);
   const open2 = () => setModalOpen(2);
-  console.log(modalOpen);
+  let { scrollYProgress } = useScroll();
+  let y = useTransform(scrollYProgress, [0, 1], ["0%", "8%"]);
 
   return (
     <section className="portfolio" id="portfolio">
-      <div className="main-title">
-        <h2>
-          <span className="highlight">Portfolio</span>
-          <span className="bg-text">
-            My
-            <br />
-            Work
-          </span>
-        </h2>
-      </div>
-      <p className="port-text">
-        Here are some projects that I've done in various frameworks.
-      </p>
-      <div className="portfolios">
-        <motion.div onClick={() => (modalOpen ? close() : open1())}>
-          <Tilt options={{ scale: 1.08 }} className="portfolio-item">
-            <div className="image">
-              <img src={port1} alt="port1" />
-            </div>
-          </Tilt>
-        </motion.div>
-        <motion.div onClick={() => (modalOpen ? close() : open2())}>
-          <Tilt options={{ scale: 1.08 }} className="portfolio-item">
-            <div className="image">
-              <img src={port2} alt="port2" />
-            </div>
-          </Tilt>
-        </motion.div>
+      <motion.div style={{ y }}>
+        <div className="main-title">
+          <h2>
+            <span className="highlight">Portfolio</span>
+            <span className="bg-text">
+              My
+              <br />
+              Work
+            </span>
+          </h2>
+        </div>
+        <p className="port-text">
+          Here are some projects that I've done in various frameworks.
+        </p>
+        <div className="portfolios">
+          <motion.div onClick={() => (modalOpen ? close() : open1())}>
+            <Tilt options={{ scale: 1.08 }} className="portfolio-item">
+              <div className="image">
+                <img src={port1} alt="port1" />
+              </div>
+            </Tilt>
+          </motion.div>
+          <motion.div onClick={() => (modalOpen ? close() : open2())}>
+            <Tilt options={{ scale: 1.08 }} className="portfolio-item">
+              <div className="image">
+                <img src={port2} alt="port2" />
+              </div>
+            </Tilt>
+          </motion.div>
 
-        <AnimatePresence
-          initial={false}
-          mode="wait"
-          onExitComplete={() => null}
-        >
-          {modalOpen === 1 && (
-            <Modal
-              modalOpen={modalOpen}
-              handleClose={close}
-              content={
-                <>
-                  <h3>Ben's Boardgame Bazaar</h3>
-                  <div className="tech">
-                    <p>React</p>
-                    <p>Tailwind CSS</p>
-                    <p>Material UI</p>
-                    <p>Axios</p>
-                    <p>Express.js</p>
-                    <p>PSQL</p>
-                    <p>Jest</p>
-                  </div>
-                  <p>
-                    This boardgame review site was created with a database in
-                    SQL, a restful API was developed in Express.js to give the
-                    front-end access through intuitive endpoints. The site has a
-                    clean look, aided by the use of Material UI elements and
-                    stylised with Tailwind CSS.
-                  </p>
-                  <div className="icons">
-                    <a
-                      href="https://github.com/retcon1/fe-nc-games"
-                      target="_blank"
-                      className="icon"
-                    >
-                      <AiFillGithub className="i" />
-                    </a>
-                    <a
-                      href="https://bensboardgamebazaar.netlify.app/"
-                      target="_blank"
-                      className="icon"
-                    >
-                      <BiSolidDice6 className="i" />
-                    </a>
-                    <a
-                      href="https://github.com/retcon1/nc-games"
-                      target="_blank"
-                      className="icon"
-                    >
-                      <AiFillGithub className="i" />
-                    </a>
-                  </div>
-                </>
-              }
-            />
-          )}
-        </AnimatePresence>
-        <AnimatePresence
-          initial={false}
-          mode="wait"
-          onExitComplete={() => null}
-        >
-          {modalOpen === 2 && (
-            <Modal
-              modalOpen={modalOpen}
-              handleClose={close}
-              content={
-                <>
-                  <div className="modal-content">
-                    <h3>Cosmic Conflict</h3>
+          <AnimatePresence
+            initial={false}
+            mode="wait"
+            onExitComplete={() => null}
+          >
+            {modalOpen === 1 && (
+              <Modal
+                modalOpen={modalOpen}
+                handleClose={close}
+                content={
+                  <>
+                    <h3>Ben's Boardgame Bazaar</h3>
                     <div className="tech">
-                      <p>TypeScript</p>
-                      <p>React Native Expo</p>
+                      <p>React</p>
+                      <p>Tailwind CSS</p>
                       <p>Material UI</p>
-                      <p>PassportJS</p>
-                      <p>Mongo DB</p>
-                      <p>Mocha/Chai</p>
+                      <p>Axios</p>
+                      <p>Express.js</p>
+                      <p>PSQL</p>
+                      <p>Jest</p>
                     </div>
                     <p>
-                      A multiplayer game app developed with React Native Expo,
-                      this group project allows players create an account and
-                      human or alien character. They can attack other players to
-                      potentially acquire their credits, which are used to
-                      upgrade their character so that you stand a better chance
-                      in future battles.
-                      <br />
-                      For more info see the presentation on YouTube below!
+                      This boardgame review site was created with a database in
+                      SQL, a restful API was developed in Express.js to give the
+                      front-end access through intuitive endpoints. The site has
+                      a clean look, aided by the use of Material UI elements and
+                      stylised with Tailwind CSS.
                     </p>
                     <div className="icons">
                       <a
-                        href="https://github.com/retcon1/cosmic-conflict-fe"
+                        href="https://github.com/retcon1/fe-nc-games"
                         target="_blank"
                         className="icon"
                       >
                         <AiFillGithub className="i" />
                       </a>
                       <a
-                        href="https://youtu.be/q5eUmA5dFSg"
+                        href="https://bensboardgamebazaar.netlify.app/"
                         target="_blank"
                         className="icon"
                       >
-                        <BiLogoYoutube className="i" />
+                        <BiSolidDice6 className="i" />
                       </a>
                       <a
-                        href="https://github.com/Bilaal96/alien-wars-api"
+                        href="https://github.com/retcon1/nc-games"
                         target="_blank"
                         className="icon"
                       >
                         <AiFillGithub className="i" />
                       </a>
                     </div>
-                  </div>
-                </>
-              }
-            />
-          )}
-        </AnimatePresence>
-      </div>
+                  </>
+                }
+              />
+            )}
+          </AnimatePresence>
+          <AnimatePresence
+            initial={false}
+            mode="wait"
+            onExitComplete={() => null}
+          >
+            {modalOpen === 2 && (
+              <Modal
+                modalOpen={modalOpen}
+                handleClose={close}
+                content={
+                  <>
+                    <div className="modal-content">
+                      <h3>Cosmic Conflict</h3>
+                      <div className="tech">
+                        <p>TypeScript</p>
+                        <p>React Native Expo</p>
+                        <p>Material UI</p>
+                        <p>PassportJS</p>
+                        <p>Mongo DB</p>
+                        <p>Mocha/Chai</p>
+                      </div>
+                      <p>
+                        A multiplayer game app developed with React Native Expo,
+                        this group project allows players create an account and
+                        human or alien character. They can attack other players
+                        to potentially acquire their credits, which are used to
+                        upgrade their character so that you stand a better
+                        chance in future battles.
+                        <br />
+                        For more info see the presentation on YouTube below!
+                      </p>
+                      <div className="icons">
+                        <a
+                          href="https://github.com/retcon1/cosmic-conflict-fe"
+                          target="_blank"
+                          className="icon"
+                        >
+                          <AiFillGithub className="i" />
+                        </a>
+                        <a
+                          href="https://youtu.be/q5eUmA5dFSg"
+                          target="_blank"
+                          className="icon"
+                        >
+                          <BiLogoYoutube className="i" />
+                        </a>
+                        <a
+                          href="https://github.com/Bilaal96/alien-wars-api"
+                          target="_blank"
+                          className="icon"
+                        >
+                          <AiFillGithub className="i" />
+                        </a>
+                      </div>
+                    </div>
+                  </>
+                }
+              />
+            )}
+          </AnimatePresence>
+        </div>
+      </motion.div>
     </section>
   );
 }

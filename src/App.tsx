@@ -12,6 +12,7 @@ function App() {
       <About />
       <WaveTransition color="#070b22" />
       <Portfolio />
+      <WaveTransition color="#2d3673" />
     </div>
   );
 }
