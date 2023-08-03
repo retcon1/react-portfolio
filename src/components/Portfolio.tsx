@@ -11,6 +11,7 @@ import {
 import Modal from "./Modal";
 import { AiFillGithub } from "react-icons/ai";
 import { BiSolidDice6, BiLogoYoutube } from "react-icons/bi";
+import { Reveal, RightReveal } from "./utils/Reveals";
 
 const defaultOptions = {
   reverse: false, // reverse the tilt direction
@@ -31,40 +32,39 @@ function Portfolio() {
   const open1 = () => setModalOpen(1);
   const open2 = () => setModalOpen(2);
   let { scrollYProgress } = useScroll();
-  let y = useTransform(scrollYProgress, [0, 1], ["0%", "8%"]);
+  let y = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
 
   return (
     <section className="portfolio" id="portfolio">
       <motion.div style={{ y }}>
-        <div className="main-title">
-          <h2>
-            <span className="highlight">Portfolio</span>
-            <span className="bg-text">
-              My
-              <br />
-              Work
-            </span>
-          </h2>
+        <RightReveal>
+          <div className="main-title">
+            <h2>
+              <span>Portfolio</span>
+              <span className="bg-text">
+                My
+                <br />
+                Work
+              </span>
+            </h2>
+          </div>
+        </RightReveal>
+        <div className="port-text">
+          <Reveal>
+            <p>Here are some projects that I've done in various frameworks.</p>
+          </Reveal>
         </div>
-        <p className="port-text">
-          Here are some projects that I've done in various frameworks.
-        </p>
         <div className="portfolios">
           <motion.div onClick={() => (modalOpen ? close() : open1())}>
-            <Tilt options={{ scale: 1.08 }} className="portfolio-item">
-              <div className="image">
-                <img src={port1} alt="port1" />
-              </div>
+            <Tilt options={{ scale: 1 }} className="portfolio-card">
+              <img src={port1} alt="port1" />
             </Tilt>
           </motion.div>
           <motion.div onClick={() => (modalOpen ? close() : open2())}>
-            <Tilt options={{ scale: 1.08 }} className="portfolio-item">
-              <div className="image">
-                <img src={port2} alt="port2" />
-              </div>
+            <Tilt options={{ scale: 1 }} className="portfolio-card">
+              <img src={port2} alt="port2" />
             </Tilt>
           </motion.div>
-
           <AnimatePresence
             initial={false}
             mode="wait"
@@ -134,52 +134,50 @@ function Portfolio() {
                 handleClose={close}
                 content={
                   <>
-                    <div className="modal-content">
-                      <h3>Cosmic Conflict</h3>
-                      <div className="tech">
-                        <p>TypeScript</p>
-                        <p>React Native Expo</p>
-                        <p>Material UI</p>
-                        <p>PassportJS</p>
-                        <p>Mongo DB</p>
-                        <p>Mocha/Chai</p>
-                      </div>
-                      <p>
-                        A multiplayer game app developed with React Native Expo,
-                        this group project allows players create an account and
-                        human or alien character. They can attack other players
-                        to potentially acquire their credits, which are used to
-                        upgrade their character so that you stand a better
-                        chance in future battles.
-                        <br />
-                        For more info see the presentation on YouTube below!
-                      </p>
-                      <div className="icons">
-                        <a
-                          href="https://github.com/retcon1/cosmic-conflict-fe"
-                          target="_blank"
-                          rel="noreferrer noopener"
-                          className="icon"
-                        >
-                          <AiFillGithub className="i" />
-                        </a>
-                        <a
-                          href="https://youtu.be/q5eUmA5dFSg"
-                          target="_blank"
-                          rel="noreferrer noopener"
-                          className="icon"
-                        >
-                          <BiLogoYoutube className="i" />
-                        </a>
-                        <a
-                          href="https://github.com/Bilaal96/alien-wars-api"
-                          target="_blank"
-                          rel="noreferrer noopener"
-                          className="icon"
-                        >
-                          <AiFillGithub className="i" />
-                        </a>
-                      </div>
+                    <h3>Cosmic Conflict</h3>
+                    <div className="tech">
+                      <p>TypeScript</p>
+                      <p>React Native Expo</p>
+                      <p>Material UI</p>
+                      <p>PassportJS</p>
+                      <p>Mongo DB</p>
+                      <p>Mocha/Chai</p>
+                    </div>
+                    <p>
+                      A multiplayer game app developed with React Native Expo,
+                      this group project allows players create an account and
+                      human or alien character. They can attack other players to
+                      potentially acquire their credits, which are used to
+                      upgrade their character so that you stand a better chance
+                      in future battles.
+                      <br />
+                      For more info see the presentation on YouTube below!
+                    </p>
+                    <div className="icons">
+                      <a
+                        href="https://github.com/retcon1/cosmic-conflict-fe"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        className="icon"
+                      >
+                        <AiFillGithub className="i" />
+                      </a>
+                      <a
+                        href="https://youtu.be/q5eUmA5dFSg"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        className="icon"
+                      >
+                        <BiLogoYoutube className="i" />
+                      </a>
+                      <a
+                        href="https://github.com/Bilaal96/alien-wars-api"
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        className="icon"
+                      >
+                        <AiFillGithub className="i" />
+                      </a>
                     </div>
                   </>
                 }

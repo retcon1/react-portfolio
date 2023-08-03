@@ -7,7 +7,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 function Hello() {
   let { scrollYProgress } = useScroll();
-  let y = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  let y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
   return (
     <header>
