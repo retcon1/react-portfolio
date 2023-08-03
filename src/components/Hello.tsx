@@ -15,7 +15,7 @@ function Hello() {
         <div className="left-header">
           <div className="image">
             <LeftReveal>
-              <img src={Ben} alt="picture of Ben Lucas" />
+              <img src={Ben} alt="Ben Lucas with a blue sky background" />
             </LeftReveal>
           </div>
         </div>
@@ -43,6 +43,7 @@ function Hello() {
               href="https://drive.google.com/file/d/1pYmmJDh9zVLBQQJrviycOZwC6yvJItLY/view?usp=sharing"
               className="main-btn"
               target="_blank"
+              rel="noreferrer noopener"
             >
               <span className="btn-text">Download CV</span>
               <span className="btn-icon">

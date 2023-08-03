@@ -96,7 +96,7 @@ function Portfolio() {
                     <div className="icons">
                       <a
                         href="https://github.com/retcon1/fe-nc-games"
-                        target="_blank"
+                        rel="noreferrer noopener"
                         className="icon"
                       >
                         <AiFillGithub className="i" />
@@ -104,6 +104,7 @@ function Portfolio() {
                       <a
                         href="https://bensboardgamebazaar.netlify.app/"
                         target="_blank"
+                        rel="noreferrer noopener"
                         className="icon"
                       >
                         <BiSolidDice6 className="i" />
@@ -111,6 +112,7 @@ function Portfolio() {
                       <a
                         href="https://github.com/retcon1/nc-games"
                         target="_blank"
+                        rel="noreferrer noopener"
                         className="icon"
                       >
                         <AiFillGithub className="i" />
@@ -156,6 +158,7 @@ function Portfolio() {
                         <a
                           href="https://github.com/retcon1/cosmic-conflict-fe"
                           target="_blank"
+                          rel="noreferrer noopener"
                           className="icon"
                         >
                           <AiFillGithub className="i" />
@@ -163,6 +166,7 @@ function Portfolio() {
                         <a
                           href="https://youtu.be/q5eUmA5dFSg"
                           target="_blank"
+                          rel="noreferrer noopener"
                           className="icon"
                         >
                           <BiLogoYoutube className="i" />
@@ -170,6 +174,7 @@ function Portfolio() {
                         <a
                           href="https://github.com/Bilaal96/alien-wars-api"
                           target="_blank"
+                          rel="noreferrer noopener"
                           className="icon"
                         >
                           <AiFillGithub className="i" />

@@ -1,12 +1,8 @@
 import { BsLinkedin } from "react-icons/bs";
 import { AiFillGithub } from "react-icons/ai";
 import { BiLogoYoutube } from "react-icons/bi";
-import {
-  FaLocationDot,
-  FaEnvelope,
-  FaPhone,
-  FaPaperPlane,
-} from "react-icons/fa6";
+import { FaLocationDot, FaEnvelope, FaPhone } from "react-icons/fa6";
+import Form from "./Form";
 
 function Contact() {
   return (
@@ -73,52 +69,33 @@ function Contact() {
               <a
                 href="https://www.linkedin.com/in/benjamin-lucas-0ab164185/"
                 target="_blank"
+                rel="noreferrer noopener"
               >
                 <BsLinkedin className="i" />
               </a>
             </div>
             <div className="contact-icon">
-              <a href="https://github.com/retcon1" target="_blank">
+              <a
+                href="https://github.com/retcon1"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 <AiFillGithub className="i" />
               </a>
             </div>
             <div className="contact-icon">
-              <a href="https://www.youtube.com/@BenLucasCritic" target="_blank">
+              <a
+                href="https://www.youtube.com/@BenLucasCritic"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 <BiLogoYoutube className="i" />
               </a>
             </div>
           </div>
         </div>
         <div className="right-contact">
-          <form action="" className="contact-form">
-            <div className="input-control i-c-2">
-              <input type="text" required placeholder="YOUR NAME" />
-              <input type="email" required placeholder="YOUR EMAIL" />
-            </div>
-            <div className="input-control">
-              <input type="text" required placeholder="ENTER SUBJECT" />
-            </div>
-            <div className="input-control">
-              <textarea
-                name=""
-                id=""
-                cols={15}
-                rows={8}
-                placeholder="Message here..."
-              ></textarea>
-            </div>
-            <div className="send-btn">
-              <a
-                href="mailto:benlucascoding@outlook.com?subject=Inquiry%20about%20your%20services&body=Hey%20there"
-                className="main-btn"
-              >
-                <span className="btn-text">Send</span>
-                <span className="btn-icon">
-                  <FaPaperPlane className="i" />
-                </span>
-              </a>
-            </div>
-          </form>
+          <Form />
         </div>
       </div>
     </section>

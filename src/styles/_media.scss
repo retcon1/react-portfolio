@@ -28,7 +28,7 @@
   }
 
   section {
-    padding: 7rem 9rem;
+    padding: 7rem 12rem;
   }
 
   .header-content {
@@ -39,6 +39,10 @@
 }
 
 @media screen and (max-width: 1070px) {
+  section {
+    padding: 7rem 10rem;
+  }
+
   .about-container {
     grid-template-columns: 1fr;
   }

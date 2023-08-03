@@ -72,6 +72,23 @@ section {
   padding: 3rem 18rem;
 }
 
+// Override default button styling
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  line-height: normal;
+  cursor: pointer;
+  outline: none;
+}
+
 .highlight {
   color: var(--color-secondary);
   font-weight: bolder;
@@ -628,6 +645,7 @@ section {
     }
   }
 }
+
 
 .main-title {
   text-align: center;
