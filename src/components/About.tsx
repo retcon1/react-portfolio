@@ -95,6 +95,7 @@ function About() {
                   href="https://drive.google.com/file/d/1pYmmJDh9zVLBQQJrviycOZwC6yvJItLY/view?usp=sharing"
                   className="main-btn"
                   target="_blank"
+                  rel="noreferrer noopener"
                 >
                   <span className="btn-text">Download CV</span>
                   <span className="btn-icon">

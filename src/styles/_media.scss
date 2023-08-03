@@ -8,7 +8,7 @@
   .contact-content-con {
     flex-direction: column;
     .right-contact {
-      margin-left: 0;
+      margin-left: 0 !important;
       margin-top: 2.5rem;
     }
   }
@@ -17,7 +17,7 @@
     flex-direction: column;
   }
   .contact-content-con .right-contact .i-c-2 :last-child {
-    margin-left: 0;
+    margin-left: 0 !important;
     margin-top: 1.5rem;
   }
 }
@@ -28,7 +28,7 @@
   }
 
   section {
-    padding: 7rem 9rem;
+    padding: 7rem 12rem;
   }
 
   .header-content {
@@ -39,6 +39,10 @@
 }
 
 @media screen and (max-width: 1070px) {
+  section {
+    padding: 7rem 10rem;
+  }
+
   .about-container {
     grid-template-columns: 1fr;
   }
@@ -158,13 +162,9 @@
       }
     }
   }
-
-  .about-page {
-    padding-bottom: 11rem;
-  }
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   section {
     padding: 2rem 2.5rem;
   }
