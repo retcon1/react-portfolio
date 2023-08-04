@@ -1,7 +1,5 @@
-import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaFileArrowDown } from "react-icons/fa6";
 import Ben from "../img/ben.jpeg";
-import React from "react";
 import { Reveal, LeftReveal } from "./utils/Reveals";
 import { motion, useScroll, useTransform } from "framer-motion";
 
@@ -49,7 +47,7 @@ function Hello() {
             >
               <span className="btn-text">Download CV</span>
               <span className="btn-icon">
-                <FontAwesomeIcon icon={faFileArrowDown} />
+                <FaFileArrowDown />
               </span>
             </a>
           </div>

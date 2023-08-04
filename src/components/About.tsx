@@ -1,9 +1,5 @@
 import { LeftReveal, Reveal, RightReveal } from "./utils/Reveals";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFileArrowDown,
-  faLayerGroup,
-} from "@fortawesome/free-solid-svg-icons";
+import { FaFileArrowDown, FaLayerGroup } from "react-icons/fa6";
 import Tech from "./Tech";
 import { motion, useScroll, useTransform } from "framer-motion";
 
@@ -35,7 +31,7 @@ function About() {
             </div>
             <div className="last-item">
               <div className="tl-icon">
-                <FontAwesomeIcon icon={faLayerGroup} />
+                <FaLayerGroup />
               </div>
               <p className="tl-duration">2023 Feb - May</p>
               <Reveal color="var(--color-accent)">
@@ -100,7 +96,7 @@ function About() {
                 >
                   <span className="btn-text">Download CV</span>
                   <span className="btn-icon">
-                    <FontAwesomeIcon icon={faFileArrowDown} />
+                    <FaFileArrowDown />
                   </span>
                 </a>
               </div>
