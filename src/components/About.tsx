@@ -94,7 +94,7 @@ function About() {
               <div className="btn-container">
                 <a
                   href="https://drive.google.com/file/d/1pYmmJDh9zVLBQQJrviycOZwC6yvJItLY/view?usp=sharing"
-                  className="main-btn"
+                  className="alt-btn"
                   target="_blank"
                   rel="noreferrer noopener"
                 >
