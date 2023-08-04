@@ -19,7 +19,8 @@ function About() {
             <h2>
               About <span>me</span>
               <span className="bg-text">
-                my <br />
+                my
+                <br />
                 stats
               </span>
             </h2>
