@@ -40,7 +40,7 @@ function Portfolio() {
         <RightReveal>
           <div className="main-title">
             <h2>
-              <span>Portfolio</span>
+              <span style={{ color: "var(--color-secondary)" }}>Portfolio</span>
               <span className="bg-text">
                 My
                 <br />

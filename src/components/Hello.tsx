@@ -34,8 +34,10 @@ function Hello() {
               happy to help in all areas of development, whether you need a
               database or API setup and maintained with easily understood
               endpoints. Or making your website a sleeker, more user-friendly
-              experience. Please don't hesitate to contact me if you think we'd
-              be a good match!
+              experience.
+              <br />
+              Please don't hesitate to contact me if you think we'd be a good
+              match!
             </p>
           </Reveal>
           <div className="btn-container">
