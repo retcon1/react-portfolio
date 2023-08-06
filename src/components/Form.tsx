@@ -43,7 +43,7 @@ function Form() {
     }
   };
   return (
-    <form ref={form} onSubmit={sendEmail} className="contact-form">
+    <form ref={form} onSubmit={sendEmail}>
       {emailSent ? <p>Thanks for your message! I'll be in touch...</p> : null}
       <div className="input-control i-c-2">
         <input type="text" name="user_name" required placeholder="YOUR NAME" />
@@ -71,7 +71,7 @@ function Form() {
           placeholder="Message here..."
         />
       </div>
-      <button className="main-btn" type="submit" value="Send">
+      <button className="alt-btn" type="submit" value="Send">
         <span className="btn-text">Send</span>
         <span className="btn-icon">
           <FaPaperPlane className="i" />

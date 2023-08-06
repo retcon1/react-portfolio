@@ -1,4 +1,5 @@
 // reset browser default
+//TODO: figure out why there's empty space on the right side of the screen until the user scrolls to the bottom
 
 * {
   margin: 0;
@@ -10,7 +11,8 @@
 :root {
   --color-primary: #070b22;
   --color-secondary: #3f9dd0;
-  --color-accent: #ff8963;
+  --color-accent: #ff8159;
+  --color-alt-page: #2d3673;
   --color-titles: #ffffff;
   --color-white: #ffffff;
   --color-black: #000;
@@ -148,10 +150,11 @@ button {
 
 .wave-transition {
   position: relative;
+  pointer-events: none;
   .wave {
     position: absolute;
     width: 100%;
-    bottom: -80px;
+    bottom: -90px;
     left: 0;
   }
 }
@@ -161,8 +164,8 @@ button {
 .about-page {
   position: relative;
   z-index: auto;
-  background-color: #2d3673;
-  padding-bottom: 9rem;
+  background-color: var(--color-alt-page);
+  padding-bottom: 16rem;
   .about-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -192,7 +195,7 @@ button {
           position: absolute;
           left: -27px;
           top: 0;
-          background-color: var(--color-secondary);
+          background-color: var(--color-accent);
           width: 50px;
           height: 50px;
           border-radius: 50%;
@@ -253,7 +256,7 @@ button {
           position: absolute;
           left: -27px;
           top: 0;
-          background-color: var(--color-secondary);
+          background-color: var(--color-accent);
           width: 50px;
           height: 50px;
           border-radius: 50%;
@@ -317,11 +320,17 @@ button {
       flex-wrap: wrap;
       justify-content: center;
       row-gap: 2rem;
-      .ball-canvas {
-        width: 140px; /* Adjust the width of each ball */
-        height: 140px; /* Adjust the height of each ball */
+      .box-canvas {
+        width: 140px;
+        height: 140px;
         margin: -5px;
       }
+    }
+  }
+  .arrow {
+    bottom: -250px !important;
+    @media screen and (max-width: 2000px) {
+      bottom: -110px !important;
     }
   }
 }
@@ -329,6 +338,9 @@ button {
 // Portfolio
 
 .portfolio {
+  // allows backdrop to properly cover section
+  padding: 0 0 !important;
+
   .port-text {
     display: flex;
     justify-content: center;
@@ -339,21 +351,29 @@ button {
   }
 
   .portfolios {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+    column-gap: 4rem;
+    align-content: center;
+    justify-content: center;
     margin-top: 3rem;
-    padding-bottom: 10rem;
+    padding-bottom: 2rem;
+    margin-bottom: 20rem;
+    // @media screen and (max-width: 900px) {
+    //   padding-bottom: 20rem;
+    // }
 
     .portfolio-card {
       cursor: pointer;
-      pointer-events: all;
-      margin: 0 2rem;
-      object-fit: contain;
-      border-radius: 15px;
+      width: auto;
+      height: auto;
       img {
         width: 100%;
-        height: 450px;
+        height: 100%;
+        max-height: 500px;
+        object-fit: cover;
         border-radius: 15px;
       }
     }
@@ -365,16 +385,17 @@ button {
       height: 100%;
       width: 100%;
       z-index: 2;
-      background: #000000e1;
       display: flex;
       align-items: center;
       justify-content: center;
       .modal {
+        box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
         position: relative;
         padding: 1rem 2rem;
-        width: clamp(50%, 500px, 100%);
-        height: min(50%, 370px);
-        background: var(--color-accent);
+        width: auto;
+        max-width: 700px;
+        height: auto;
+        background: var(--c olor-accent);
         background: linear-gradient(
           var(--color-accent) 40%,
           var(--color-primary) 100%
@@ -392,6 +413,7 @@ button {
 
         h3 {
           text-transform: uppercase;
+          text-shadow: #000;
           font-size: 2rem;
           margin: 0.5rem 0;
           text-align: center;
@@ -448,6 +470,17 @@ button {
       }
     }
   }
+
+  // needed so the arrow doesn't break through to the next page
+  .arrow {
+    position: relative !important;
+    width: 1%;
+    bottom: 150px !important;
+    @media screen and (max-width: 913px) {
+      bottom: 300px !important;
+    }
+    
+  }
 }
 
 // Contact
@@ -498,7 +531,7 @@ button {
           align-items: center;
           justify-content: center;
           color: var(--color-white);
-          background-color: var(--color-grey-5);
+          background-color: var(--color-primary);
           cursor: pointer;
           width: 60px;
           height: 60px;
@@ -506,7 +539,7 @@ button {
           margin: 0 0.4rem;
           transition: var(--transition);
           &:hover {
-            background-color: var(--color-secondary);
+            background-color: var(--color-accent);
             .i {
               color: var(--color-primary);
             }
@@ -535,7 +568,7 @@ button {
           padding: 0.8rem 1.1rem;
           outline: none;
           border: none;
-          background-color: var(--color-grey-5);
+          background-color: var(--color-primary);
           width: 100%;
           color: var(--color-white);
           resize: none;
@@ -556,6 +589,14 @@ button {
 }
 
 // Independent Components
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  bottom: 4% !important;
+  font-size: 2.5rem;
+}
 
 .btn-container {
   display: flex;
@@ -602,6 +643,47 @@ button {
   }
 }
 
+.alt-btn {
+  border-radius: 30px;
+  color: inherit;
+  font-weight: 600;
+  position: relative;
+  border: 1px solid var(--color-accent);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  z-index: 2;
+  .btn-text {
+    padding: 0 2rem;
+  }
+  .btn-icon {
+    background-color: var(--color-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 1rem;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: var(--transition);
+    z-index: -1;
+  }
+  &:hover {
+    &::before {
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-accent);
+      transform: translateX(0);
+      transition: var(--transition);
+    }
+  }
+}
+
 .main-title {
   text-align: center;
   display: flex;
@@ -616,7 +698,7 @@ button {
     font-weight: 700;
     white-space: nowrap;
     span {
-      color: #ff8963;
+      color: #ff8159;
     }
     .bg-text {
       line-height: 9rem;

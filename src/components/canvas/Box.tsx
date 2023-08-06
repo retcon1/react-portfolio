@@ -1,5 +1,5 @@
-import React, { Suspense, useRef, useState } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
 import {
   Decal,
   Float,
@@ -10,19 +10,19 @@ import {
 
 import CanvasLoader from "../Loader";
 
-interface BallProps {
+interface BoxProps {
   imgUrl: string;
 }
 
-const Ball = ({ imgUrl }: BallProps) => {
+const Box = ({ imgUrl }: BoxProps) => {
   const [decal] = useTexture([imgUrl]);
 
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
-      <ambientLight intensity={0.25} />
+      <ambientLight intensity={0.9} color="#ff8159" />
       <directionalLight position={[0, 0, 0.05]} />
-      <mesh castShadow receiveShadow scale={2.5}>
-        <sphereGeometry args={[1, 32, 32]} />
+      <mesh castShadow receiveShadow scale={3}>
+        <boxGeometry args={[1, 1, 1]} />
         <meshStandardMaterial
           color="#fff8eb"
           polygonOffset
@@ -30,7 +30,7 @@ const Ball = ({ imgUrl }: BallProps) => {
           flatShading
         />
         <Decal
-          position={[0, 0, 1]}
+          position={[0, 0, 0.99]}
           map={decal}
           rotation={[2 * Math.PI, 0, 6.25]}
         />
@@ -39,7 +39,7 @@ const Ball = ({ imgUrl }: BallProps) => {
   );
 };
 
-const BallCanvas = ({ imgUrl }: BallProps) => {
+const BoxCanvas = ({ imgUrl }: BoxProps) => {
   return (
     <Canvas
       frameloop="always"
@@ -48,7 +48,7 @@ const BallCanvas = ({ imgUrl }: BallProps) => {
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} />
-        <Ball imgUrl={imgUrl} />
+        <Box imgUrl={imgUrl} />
       </Suspense>
 
       <Preload all />
@@ -56,4 +56,4 @@ const BallCanvas = ({ imgUrl }: BallProps) => {
   );
 };
 
-export default BallCanvas;
+export default BoxCanvas;

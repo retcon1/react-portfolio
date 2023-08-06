@@ -1,16 +1,15 @@
-import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaFileArrowDown } from "react-icons/fa6";
 import Ben from "../img/ben.jpeg";
-import React from "react";
 import { Reveal, LeftReveal } from "./utils/Reveals";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Arrow from "./Arrow";
 
 function Hello() {
   let { scrollYProgress } = useScroll();
   let y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
   return (
-    <header>
+    <header id="header">
       <motion.div className="header-content" style={{ y }}>
         <div className="left-header">
           <div className="image">
@@ -34,8 +33,10 @@ function Hello() {
               happy to help in all areas of development, whether you need a
               database or API setup and maintained with easily understood
               endpoints. Or making your website a sleeker, more user-friendly
-              experience. Please don't hesitate to contact me if you think we'd
-              be a good match!
+              experience.
+              <br />
+              Please don't hesitate to contact me if you think we'd be a good
+              match!
             </p>
           </Reveal>
           <div className="btn-container">
@@ -47,11 +48,12 @@ function Hello() {
             >
               <span className="btn-text">Download CV</span>
               <span className="btn-icon">
-                <FontAwesomeIcon icon={faFileArrowDown} />
+                <FaFileArrowDown />
               </span>
             </a>
           </div>
         </div>
+        <Arrow section="#about" />
       </motion.div>
     </header>
   );

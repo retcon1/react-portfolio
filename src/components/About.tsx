@@ -1,25 +1,23 @@
 import { LeftReveal, Reveal, RightReveal } from "./utils/Reveals";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFileArrowDown,
-  faLayerGroup,
-} from "@fortawesome/free-solid-svg-icons";
+import { FaFileArrowDown, FaLayerGroup } from "react-icons/fa6";
 import Tech from "./Tech";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Arrow from "./Arrow";
 
 function About() {
   let { scrollYProgress } = useScroll();
-  let y = useTransform(scrollYProgress, [0, 1], ["0%", "6%"]);
+  let y = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
 
   return (
-    <section className="about-page">
+    <section className="about-page" id="about">
       <motion.div style={{ y }}>
         <div className="main-title">
           <LeftReveal>
             <h2>
               About <span>me</span>
               <span className="bg-text">
-                my <br />
+                my
+                <br />
                 stats
               </span>
             </h2>
@@ -34,7 +32,7 @@ function About() {
             </div>
             <div className="last-item">
               <div className="tl-icon">
-                <FontAwesomeIcon icon={faLayerGroup} />
+                <FaLayerGroup />
               </div>
               <p className="tl-duration">2023 Feb - May</p>
               <Reveal color="var(--color-accent)">
@@ -93,13 +91,13 @@ function About() {
               <div className="btn-container">
                 <a
                   href="https://drive.google.com/file/d/1pYmmJDh9zVLBQQJrviycOZwC6yvJItLY/view?usp=sharing"
-                  className="main-btn"
+                  className="alt-btn"
                   target="_blank"
                   rel="noreferrer noopener"
                 >
                   <span className="btn-text">Download CV</span>
                   <span className="btn-icon">
-                    <FontAwesomeIcon icon={faFileArrowDown} />
+                    <FaFileArrowDown />
                   </span>
                 </a>
               </div>
@@ -116,6 +114,7 @@ function About() {
             </div>
           </LeftReveal>
         </div>
+        <Arrow section="#portfolio" />
       </motion.div>
     </section>
   );
