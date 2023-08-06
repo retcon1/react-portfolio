@@ -328,7 +328,10 @@ button {
     }
   }
   .arrow {
-    bottom: -110px !important;
+    bottom: -250px !important;
+    @media screen and (max-width: 2000px) {
+      bottom: -110px !important;
+    }
   }
 }
 
@@ -472,7 +475,11 @@ button {
   .arrow {
     position: relative !important;
     width: 1%;
-    bottom: 300px !important;
+    bottom: 150px !important;
+    @media screen and (max-width: 913px) {
+      bottom: 300px !important;
+    }
+    
   }
 }
 
