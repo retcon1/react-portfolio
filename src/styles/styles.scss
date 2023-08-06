@@ -11,6 +11,7 @@
   --color-primary: #070b22;
   --color-secondary: #3f9dd0;
   --color-accent: #ff8159;
+  --color-alt-page: #2d3673;
   --color-titles: #ffffff;
   --color-white: #ffffff;
   --color-black: #000;
@@ -148,10 +149,11 @@ button {
 
 .wave-transition {
   position: relative;
+  pointer-events: none;
   .wave {
     position: absolute;
     width: 100%;
-    bottom: -80px;
+    bottom: -90px;
     left: 0;
   }
 }
@@ -162,7 +164,7 @@ button {
   position: relative;
   z-index: auto;
   background-color: #2d3673;
-  padding-bottom: 9rem;
+  padding-bottom: 12rem;
   .about-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -350,7 +352,11 @@ button {
     align-content: center;
     justify-content: center;
     margin-top: 3rem;
-    padding-bottom: 20rem;
+    padding-bottom: 2rem;
+    margin-bottom: 20rem;
+    // @media screen and (max-width: 900px) {
+    //   padding-bottom: 20rem;
+    // }
 
     .portfolio-card {
       cursor: pointer;
@@ -456,6 +462,12 @@ button {
         }
       }
     }
+  }
+
+  // needed so the arrow doesn't break through to the next page
+  .arrow {
+    position: relative !important;
+    bottom: 300px !important;
   }
 }
 
@@ -565,6 +577,14 @@ button {
 }
 
 // Independent Components
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  bottom: 4% !important;
+  font-size: 2.5rem;
+}
 
 .btn-container {
   display: flex;

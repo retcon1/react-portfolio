@@ -9,11 +9,11 @@ function App() {
   return (
     <div>
       <Hello />
-      <WaveTransition color="#2d3673" />
+      <WaveTransition color="var(--color-alt-page)" />
       <About />
-      <WaveTransition color="#070b22" />
+      <WaveTransition color="var(--color-primary)" />
       <Portfolio />
-      <WaveTransition color="#2d3673" />
+      <WaveTransition color="var(--color-alt-page)" />
       <Contact />
     </div>
   );

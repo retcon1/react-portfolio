@@ -2,13 +2,14 @@ import { FaFileArrowDown } from "react-icons/fa6";
 import Ben from "../img/ben.jpeg";
 import { Reveal, LeftReveal } from "./utils/Reveals";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Arrow from "./Arrow";
 
 function Hello() {
   let { scrollYProgress } = useScroll();
   let y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
   return (
-    <header>
+    <header id="header">
       <motion.div className="header-content" style={{ y }}>
         <div className="left-header">
           <div className="image">
@@ -52,6 +53,7 @@ function Hello() {
             </a>
           </div>
         </div>
+        <Arrow section="#about" />
       </motion.div>
     </header>
   );

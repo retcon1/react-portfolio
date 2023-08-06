@@ -28,7 +28,7 @@ function WaveTransition({ color }: WaveProps) {
         options={{
           height: 70,
           amplitude: 20,
-          speed: 0.25,
+          speed: 0.24,
           points: 3,
         }}
       />

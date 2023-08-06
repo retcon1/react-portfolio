@@ -12,6 +12,7 @@ import Modal from "./Modal";
 import { AiFillGithub } from "react-icons/ai";
 import { BiSolidDice6, BiLogoYoutube } from "react-icons/bi";
 import { Reveal, RightReveal } from "./utils/Reveals";
+import Arrow from "./Arrow";
 
 const defaultOptions = {
   reverse: false, // reverse the tilt direction
@@ -35,8 +36,8 @@ function Portfolio() {
   let y = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
 
   return (
-    <section className="portfolio" id="portfolio">
-      <motion.div style={{ y }}>
+    <motion.div style={{ y }}>
+      <section className="portfolio" id="portfolio">
         <RightReveal>
           <div className="main-title">
             <h2>
@@ -185,8 +186,9 @@ function Portfolio() {
             )}
           </AnimatePresence>
         </div>
-      </motion.div>
-    </section>
+        <Arrow section="#contact" />
+      </section>
+    </motion.div>
   );
 }
 

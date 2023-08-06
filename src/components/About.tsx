@@ -2,14 +2,15 @@ import { LeftReveal, Reveal, RightReveal } from "./utils/Reveals";
 import { FaFileArrowDown, FaLayerGroup } from "react-icons/fa6";
 import Tech from "./Tech";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Arrow from "./Arrow";
 
 function About() {
   let { scrollYProgress } = useScroll();
   let y = useTransform(scrollYProgress, [0, 1], ["0%", "6%"]);
 
   return (
-    <section className="about-page">
-      <motion.div style={{ y }}>
+    <motion.div style={{ y }}>
+      <section className="about-page" id="about">
         <div className="main-title">
           <LeftReveal>
             <h2>
@@ -113,8 +114,9 @@ function About() {
             </div>
           </LeftReveal>
         </div>
-      </motion.div>
-    </section>
+        <Arrow section="#portfolio" />
+      </section>
+    </motion.div>
   );
 }
 
