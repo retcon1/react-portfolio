@@ -1,5 +1,4 @@
-import { animate, motion, useAnimation, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import { BsChevronDown } from "react-icons/bs";
 
 interface ArrowProps {
@@ -7,13 +6,8 @@ interface ArrowProps {
 }
 
 function Arrow({ section }: ArrowProps) {
-  const controls = useAnimation();
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-
   const handleClick = () => {
     const nextSection = document.querySelector(section);
-    console.log(nextSection);
     nextSection?.scrollIntoView({ behavior: "smooth" });
   };
 

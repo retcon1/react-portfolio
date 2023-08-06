@@ -163,8 +163,8 @@ button {
 .about-page {
   position: relative;
   z-index: auto;
-  background-color: #2d3673;
-  padding-bottom: 12rem;
+  background-color: var(--color-alt-page);
+  padding-bottom: 16rem;
   .about-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -326,6 +326,9 @@ button {
       }
     }
   }
+  .arrow {
+    bottom: -110px !important;
+  }
 }
 
 // Portfolio
@@ -467,6 +470,7 @@ button {
   // needed so the arrow doesn't break through to the next page
   .arrow {
     position: relative !important;
+    width: 1%;
     bottom: 300px !important;
   }
 }

@@ -6,11 +6,11 @@ import Arrow from "./Arrow";
 
 function About() {
   let { scrollYProgress } = useScroll();
-  let y = useTransform(scrollYProgress, [0, 1], ["0%", "6%"]);
+  let y = useTransform(scrollYProgress, [0, 1], ["0%", "10%"]);
 
   return (
-    <motion.div style={{ y }}>
-      <section className="about-page" id="about">
+    <section className="about-page" id="about">
+      <motion.div style={{ y }}>
         <div className="main-title">
           <LeftReveal>
             <h2>
@@ -115,8 +115,8 @@ function About() {
           </LeftReveal>
         </div>
         <Arrow section="#portfolio" />
-      </section>
-    </motion.div>
+      </motion.div>
+    </section>
   );
 }
 
