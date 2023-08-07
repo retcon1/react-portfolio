@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Backdrop from "./Backdrop";
 import { ImCross } from "react-icons/im";
+import { ReactNode } from "react";
 
 const dropIn = {
   hidden: {
@@ -26,7 +27,7 @@ const dropIn = {
 interface ModalProps {
   modalOpen: number;
   handleClose(): void;
-  content: any;
+  content: ReactNode;
 }
 
 function Modal({ handleClose, content }: ModalProps) {
