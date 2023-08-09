@@ -25,5 +25,7 @@ yarn-error.log*
 *.jpeg
 *.jpg
 
+/src/img
+
 # Local Netlify folder
 .netlify

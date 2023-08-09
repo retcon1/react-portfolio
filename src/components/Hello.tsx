@@ -1,5 +1,5 @@
 import { FaFileArrowDown } from "react-icons/fa6";
-import Ben from "../img/ben.jpeg";
+import Hero from "../img/hero.webp";
 import { Reveal, LeftReveal } from "./utils/Reveals";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Arrow from "./Arrow";
@@ -14,7 +14,7 @@ function Hello() {
         <div className="left-header">
           <div className="image">
             <LeftReveal>
-              <img src={Ben} alt="Ben Lucas with a blue sky background" />
+              <img src={Hero} alt="Ben Lucas with a blue sky background" />
             </LeftReveal>
           </div>
         </div>
