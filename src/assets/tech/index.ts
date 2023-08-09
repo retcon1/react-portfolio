@@ -9,6 +9,7 @@ import tailwind from "./tailwind.png";
 import typescript from "./typescript.png";
 import threejs from "./threejs.svg";
 import psql from "./psql.png";
+import sass from "./sass.svg";
 
 export const technologies = [
   {
@@ -30,6 +31,10 @@ export const technologies = [
   {
     name: "React JS",
     icon: reactjs,
+  },
+  {
+    name: "SCSS",
+    icon: sass,
   },
   {
     name: "Tailwind CSS",
