@@ -58,12 +58,12 @@ function Portfolio() {
         <div className="portfolios">
           <motion.div onClick={() => (modalOpen ? close() : open1())}>
             <Tilt options={{ scale: 1 }} className="portfolio-card">
-              <img src={port1} alt="port1" />
+              <img src={port1} alt="port1" loading="lazy" />
             </Tilt>
           </motion.div>
           <motion.div onClick={() => (modalOpen ? close() : open2())}>
             <Tilt options={{ scale: 1 }} className="portfolio-card">
-              <img src={port2} alt="port2" />
+              <img src={port2} alt="port2" loading="lazy" />
             </Tilt>
           </motion.div>
           <AnimatePresence
