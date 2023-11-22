@@ -41,7 +41,17 @@ function Modal({ handleClose, content }: ModalProps) {
         animate="visible"
         exit="exit"
       >
-        <ImCross className="exit" onClick={handleClose} />
+        <ImCross
+          className="exit"
+          onClick={handleClose}
+          aria-label="Close"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              handleClose();
+            }
+          }}
+        />
         {content}
       </motion.div>
     </Backdrop>

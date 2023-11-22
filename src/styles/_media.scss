@@ -63,19 +63,22 @@
   .header-content {
     grid-template-columns: 1fr;
     padding-bottom: 10rem;
-  }
 
-  .left-header {
-    .h-shape {
-      display: none;
-    }
-    .side-wave {
-      display: none;
-    }
-    .image {
-      filter: none !important;
-      img {
-        margin-top: 20px;
+    .left-header {
+      .h-shape {
+        display: none;
+      }
+      .side-wave {
+        display: none;
+      }
+      .image {
+        filter: none;
+        img {
+          max-width: 80%;
+          margin: 0 auto;
+          display: block;
+          margin-top: 20px;
+        }
       }
     }
   }

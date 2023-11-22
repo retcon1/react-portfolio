@@ -74,35 +74,38 @@ function Contact() {
             </div>
           </LeftReveal>
           <LeftReveal>
-            <div className="contact-icons">
-              <div className="contact-icon">
+            <ul className="contact-icons">
+              <li className="contact-icon">
                 <a
                   href="https://www.linkedin.com/in/benjamin-lucas-0ab164185/"
                   target="_blank"
                   rel="noreferrer noopener"
+                  aria-label="Visit my LinkedIn profile"
                 >
                   <BsLinkedin className="i" />
                 </a>
-              </div>
-              <div className="contact-icon">
+              </li>
+              <li className="contact-icon">
                 <a
                   href="https://github.com/retcon1"
                   target="_blank"
                   rel="noreferrer noopener"
+                  aria-label="Visit my GitHub profile"
                 >
                   <AiFillGithub className="i" />
                 </a>
-              </div>
-              <div className="contact-icon">
+              </li>
+              <li className="contact-icon">
                 <a
                   href="https://www.youtube.com/@BenLucasCritic"
                   target="_blank"
                   rel="noreferrer noopener"
+                  aria-label="Visit my YouTube channel"
                 >
                   <BiLogoYoutube className="i" />
                 </a>
-              </div>
-            </div>
+              </li>
+            </ul>
           </LeftReveal>
         </div>
         <div className="right-contact">

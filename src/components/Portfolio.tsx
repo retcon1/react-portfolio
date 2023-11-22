@@ -56,12 +56,38 @@ function Portfolio() {
           </Reveal>
         </div>
         <div className="portfolios">
-          <motion.div onClick={() => (modalOpen ? close() : open1())}>
+          <motion.div
+            onClick={() => (modalOpen ? close() : open1())}
+            // Needed for accessibility, allows user to hit enter to select
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                if (modalOpen) {
+                  close();
+                } else {
+                  open1();
+                }
+              }
+            }}
+            tabIndex={0}
+          >
             <Tilt options={{ scale: 1 }} className="portfolio-card">
               <img src={port1} alt="port1" loading="lazy" />
             </Tilt>
           </motion.div>
-          <motion.div onClick={() => (modalOpen ? close() : open2())}>
+          <motion.div
+            onClick={() => (modalOpen ? close() : open2())}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                // Trigger the same action as the click event
+                if (modalOpen) {
+                  close();
+                } else {
+                  open1();
+                }
+              }
+            }}
+            tabIndex={0}
+          >
             <Tilt options={{ scale: 1 }} className="portfolio-card">
               <img src={port2} alt="port2" loading="lazy" />
             </Tilt>

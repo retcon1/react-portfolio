@@ -90,10 +90,12 @@ function About() {
             <RightReveal>
               <div className="btn-container">
                 <a
-                  href="https://drive.google.com/file/d/1pYmmJDh9zVLBQQJrviycOZwC6yvJItLY/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1rtcUfH2vSqX1fzBqs0FCOvvAYhfwFsVQ/view?usp=sharing"
                   className="alt-btn"
                   target="_blank"
                   rel="noreferrer noopener"
+                  aria-label="Download Ben Lucas' CV"
+                  role="button"
                 >
                   <span className="btn-text">Download CV</span>
                   <span className="btn-icon">
