@@ -94,6 +94,8 @@ function About() {
                   className="alt-btn"
                   target="_blank"
                   rel="noreferrer noopener"
+                  aria-label="Download Ben Lucas' CV"
+                  role="button"
                 >
                   <span className="btn-text">Download CV</span>
                   <span className="btn-icon">

@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Arrow from "./Arrow";
 
 function Hello() {
+  // Used for parallax scrolling
   let { scrollYProgress } = useScroll();
   let y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
@@ -14,7 +15,7 @@ function Hello() {
         <div className="left-header">
           <div className="image">
             <LeftReveal>
-              <img src={Hero} alt="Ben Lucas with a blue sky background" />
+              <img src={Hero} alt="JavaScript Developer Ben Lucas in a coat, on a mountain with a blue sky background" />
             </LeftReveal>
           </div>
         </div>
@@ -45,6 +46,8 @@ function Hello() {
               className="main-btn"
               target="_blank"
               rel="noreferrer noopener"
+              aria-label="Download Ben Lucas' CV"
+              role="button"
             >
               <span className="btn-text">Download CV</span>
               <span className="btn-icon">
