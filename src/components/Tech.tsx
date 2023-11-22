@@ -5,7 +5,7 @@ import { technologies } from "../assets/tech";
 
 function Tech() {
   return (
-    <ul>
+    <ul className="tech-container">
       {technologies.map((tech) => (
         <li key={tech.name} className="box-canvas">
           <BoxCanvas imgUrl={tech.icon} />

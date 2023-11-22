@@ -111,9 +111,7 @@ function About() {
             <h4>My Skills</h4>
           </RightReveal>
           <LeftReveal>
-            <div className="tech-container">
               <Tech />
-            </div>
           </LeftReveal>
         </div>
         <Arrow section="#portfolio" />
