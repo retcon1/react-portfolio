@@ -162,7 +162,13 @@ export const projects = [
           This 48-hour Hackathon project was developed in a team of 4, based
           around the theme of 'green'. We decided to create an environmental
           news aggregator to test out our web scraping abilities. Storing the
-          news and user data using Firebase. We also scraped an
+          news and user data using Firebase. We also scraped the Extinction
+          Rebellion site to provide an events page where users would be able to
+          get notified for upcoming protests and talks.
+          <br />
+          Not all of this made it feature complete into Planet Press after a
+          mere 48 hours, but our team will be going back and working on it more
+          in the coming months!
         </p>
         <div className="icons">
           <a
