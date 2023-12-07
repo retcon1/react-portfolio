@@ -1,4 +1,4 @@
-import React　from "react";
+import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Reveal, RightReveal } from "./utils/Reveals";
 import Arrow from "./Arrow";
