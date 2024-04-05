@@ -32,7 +32,7 @@ function Contact() {
               I'm currently located in Manchester, a fantastic tech hub! I can
               work completely remotely though and have an excellent home setup
               so that our communication will always be top-notch whenever you
-              need me. Hybrid outside of Manchester is always a possibility too,
+              need me. Hybrid or relocating outside of Manchester is always an option too,
               let's talk possibilities!
             </p>
           </Reveal>
