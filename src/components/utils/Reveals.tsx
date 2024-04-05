@@ -24,7 +24,7 @@ export const Reveal = ({
       mainControls.start("visible");
       slideControls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView, mainControls, slideControls]);
 
   return (
     <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
@@ -72,7 +72,7 @@ export const LeftReveal = ({ children }: Props) => {
       // Use the animation
       mainControls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView, mainControls]);
 
   return (
     <motion.div
@@ -101,7 +101,7 @@ export const RightReveal = ({ children }: Props) => {
       // Use the animation
       mainControls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView, mainControls]);
 
   return (
     <motion.div
