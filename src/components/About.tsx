@@ -30,6 +30,32 @@ function About() {
                 <h4>My Timeline</h4>
               </Reveal>
             </div>
+            <div className="timeline-item">
+              <div className="tl-icon">
+                <FaLayerGroup />
+              </div>
+              <p className="tl-duration">2024 Jan - Present</p>
+              <Reveal color="var(--color-accent)">
+                <h5>
+                  Full Stack Developer<span> - Digital Futures</span>
+                </h5>
+              </Reveal>
+              <Reveal color="var(--color-accent)">
+                <p>
+                  During the 12 week Digital Futures Academy I furthered my knowledge of full stack
+                  development, learning
+                  <span className="alt-highlight"> Java</span> and
+                  <span className="alt-highlight"> OOP</span> principles, as well as deepening my
+                  experience with front-end<span className="alt-highlight"> React </span>
+                  development, and back-end development with
+                  <span className="alt-highlight"> MongoDB</span>. I gained a better understanding
+                  of Agile development when working on a group project in a team of 7, alongside 2
+                  other teams which we had to communicate with to ensure our project was successful.
+                  Now I look forward to putting my new skills to use in the industry when being
+                  placed with one of Digital Futures' clients.
+                </p>
+              </Reveal>
+            </div>
             <div className="last-item">
               <div className="tl-icon">
                 <FaLayerGroup />
@@ -42,20 +68,17 @@ function About() {
               </Reveal>
               <Reveal color="var(--color-accent)">
                 <p>
-                  A 13 week, full-time bootcamp in which I learned JavaScript
-                  programming in a test driven development environment. I
-                  completed a solo project which included back-end development
-                  utilising
+                  A 13 week, full-time bootcamp in which I learned JavaScript programming in a test
+                  driven development environment. I completed a solo project which included back-end
+                  development utilising
                   <span className="alt-highlight"> Express.js</span> and
-                  <span className="alt-highlight"> SQL</span>, front-end
-                  development using
+                  <span className="alt-highlight"> SQL</span>, front-end development using
                   <span className="alt-highlight"> React</span>,
                   <span className="alt-highlight"> Tailwind CSS</span>,
                   <span className="alt-highlight"> Material UI</span> and
-                  <span className="alt-highlight"> Axios</span>. Culminating in
-                  a group project with 5 other wonderful devs, in which we built
-                  an online raiding game, using{" "}
-                  <span className="alt-highlight">TypeScript</span>,
+                  <span className="alt-highlight"> Axios</span>. Culminating in a group project with
+                  5 other wonderful devs, in which we built an online raiding game, using
+                  <span className="alt-highlight"> TypeScript</span>,
                   <span className="alt-highlight"> PassportJS</span>,
                   <span className="alt-highlight"> MongoDB</span> and
                   <span className="alt-highlight"> React Native Expo</span>.
@@ -73,18 +96,15 @@ function About() {
             </div>
             <Reveal color="var(--color-accent)">
               <p>
-                After years of being passionate about technology, from gaming to
-                PC building, video production and beyond, my innate desire to
-                help people solve their problems with tech has brought me to
-                coding; the place where I can make the biggest difference for
+                After years of being passionate about technology, from gaming to PC building, video
+                production and beyond, my innate desire to help people solve their problems with
+                tech has brought me to coding; the place where I can make the biggest difference for
                 the most amount of people!
                 <br />
                 <br />
-                Now, after diving in head-first through the Northcoders Software
-                Development Bootcamp, I'm training every day to become a better
-                programmer to help people like
-                <span className="alt-highlight"> you</span> achieve their goals
-                faster.
+                Now, after diving in head-first through the Northcoders Software Development
+                Bootcamp, I'm training every day to become a better programmer to help people like
+                <span className="alt-highlight"> you</span> achieve their goals faster.
               </p>
             </Reveal>
             <RightReveal>
@@ -111,7 +131,7 @@ function About() {
             <h4>My Skills</h4>
           </RightReveal>
           <LeftReveal>
-              <Tech />
+            <Tech />
           </LeftReveal>
         </div>
         <Arrow section="#portfolio" />
