@@ -19,12 +19,12 @@ const Box = ({ imgUrl }: BoxProps) => {
 
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
-      <ambientLight intensity={0.9} color="#ff8159" />
+      <ambientLight intensity={10} color="#ff8159" />
       <directionalLight position={[0, 0, 0.05]} />
       <mesh castShadow receiveShadow scale={3}>
         <boxGeometry args={[1, 1, 1]} />
         <meshStandardMaterial
-          color="#fff8eb"
+          color="#ffffff"
           polygonOffset
           polygonOffsetFactor={5}
           flatShading

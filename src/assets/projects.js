@@ -3,7 +3,9 @@ import port1 from "../img/port1.webp";
 import port2 from "../img/port2.webp";
 import port3 from "../img/port3.webp";
 import port4 from "../img/port4.webp";
+import port5 from "../img/port5.webp";
 import { BiLogoYoutube, BiSolidDice6 } from "react-icons/bi";
+import { GiCommercialAirplane } from "react-icons/gi";
 import { FaDice } from "react-icons/fa6";
 export const projects = [
   {
@@ -22,10 +24,9 @@ export const projects = [
           <p>Jest</p>
         </div>
         <p>
-          This boardgame review site was created with a database in SQL, a
-          restful API was developed in Express.js to give the front-end access
-          through intuitive endpoints. The site has a clean look, aided by the
-          use of Material UI elements and stylised with Tailwind CSS.
+          This boardgame review site was created with a database in SQL, a restful API was developed
+          in Express.js to give the front-end access through intuitive endpoints. The site has a
+          clean look, aided by the use of Material UI elements and stylised with Tailwind CSS.
         </p>
         <div className="icons">
           <a
@@ -70,11 +71,10 @@ export const projects = [
           <p>Mocha/Chai</p>
         </div>
         <p>
-          A multiplayer game app developed with React Native Expo, this group
-          project allows players create an account and human or alien character.
-          They can attack other players to potentially acquire their credits,
-          which are used to upgrade their character so that you stand a better
-          chance in future battles.
+          A multiplayer game app developed with React Native Expo, this group project allows players
+          create an account and human or alien character. They can attack other players to
+          potentially acquire their credits, which are used to upgrade their character so that you
+          stand a better chance in future battles.
           <br />
           For more info see the presentation on YouTube below!
         </p>
@@ -120,9 +120,8 @@ export const projects = [
           <p>Axios</p>
         </div>
         <p>
-          A space for me to play around with different bits of tech and ideas.{" "}
-          <br /> Such as the minimax algorithm used in the naughts and crosses
-          game.
+          A space for me to play around with different bits of tech and ideas. <br /> Such as the
+          minimax algorithm used in the noughts and crosses game.
         </p>
         <div className="icons">
           <a
@@ -159,16 +158,11 @@ export const projects = [
           <p>Puppeteer</p>
         </div>
         <p>
-          This 48-hour Hackathon project was developed in a team of 4, based
-          around the theme of 'green'. We decided to create an environmental
-          news aggregator to test out our web scraping abilities. Storing the
-          news and user data using Firebase. We also scraped the Extinction
-          Rebellion site to provide an events page where users would be able to
-          get notified for upcoming protests and talks.
-          <br />
-          Not all of this made it feature complete into Planet Press after a
-          mere 48 hours, but our team will be going back and working on it more
-          in the coming months!
+          This 48-hour Hackathon project was developed in a team of 4, based around the theme of
+          'green'. We decided to create an environmental news aggregator to test out our web
+          scraping abilities. Storing the news and user data using Firebase. We also scraped the
+          Extinction Rebellion site to provide an events page where users would be able to get
+          notified for upcoming protests and talks.
         </p>
         <div className="icons">
           <a
@@ -178,6 +172,47 @@ export const projects = [
             className="icon"
           >
             <AiFillGithub className="i" />
+          </a>
+        </div>
+      </>
+    ),
+  },
+  {
+    id: 5,
+    image: port5,
+    modalContent: (
+      <>
+        <h3>Travel2U</h3>
+        <div className="tech">
+          <p>JavaScript</p>
+          <p>React</p>
+          <p>Bootstrap</p>
+          <p>Express</p>
+          <p>MongoDB</p>
+        </div>
+        <p>
+          This fullstack React site was the final challenge at the Digital Futures Academy. The site
+          makes calls to both weather and location APIs to provide the user with the weather and a
+          map of the location they are searching for. The user can also signup and save their
+          favourite locations to the database so that they can return at any time. The front end
+          utilises Bootstrap for styling, while the backend uses Express and MongoDB.
+        </p>
+        <div className="icons">
+          <a
+            href="https://github.com/retcon1/travel2u"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="icon"
+          >
+            <AiFillGithub className="i" />
+          </a>
+          <a
+            href="https://benstravel2u.netlify.app"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="icon"
+          >
+            <GiCommercialAirplane className="i" />
           </a>
         </div>
       </>

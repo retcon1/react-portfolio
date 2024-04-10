@@ -10,6 +10,7 @@ import typescript from "./typescript.png";
 import threejs from "./threejs.svg";
 import psql from "./psql.png";
 import sass from "./sass.svg";
+import java from "./java.png";
 
 export const technologies = [
   {
@@ -27,6 +28,10 @@ export const technologies = [
   {
     name: "TypeScript",
     icon: typescript,
+  },
+  {
+    name: "Java",
+    icon: java,
   },
   {
     name: "React JS",
