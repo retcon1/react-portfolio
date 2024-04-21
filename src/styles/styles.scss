@@ -49,6 +49,7 @@ body {
   font-size: 1.1rem;
   color: var(--color-white);
   transition: var(--transition);
+  overflow-x: hidden;
 }
 
 a {
@@ -245,11 +246,7 @@ button {
           left: -2px; /* Adjust this value to position the gradient line */
           height: 100%;
           width: 1px;
-          background-image: linear-gradient(
-            to bottom,
-            var(--color-white),
-            transparent
-          );
+          background-image: linear-gradient(to bottom, var(--color-white), transparent);
           z-index: 0; /* Place the pseudo-element behind the content */
         }
         .tl-icon {
@@ -397,10 +394,7 @@ button {
         transform: translate(50vh, 50vh); /* Center the modal */
         // top: 70vh; /* Position it 50% from the top */
         // left: 50%; /* Position it 50% from the left */
-        background: linear-gradient(
-          var(--color-accent) 40%,
-          var(--color-primary) 100%
-        );
+        background: linear-gradient(var(--color-accent) 40%, var(--color-primary) 100%);
         border-radius: 50px;
         z-index: 9999;
         overflow: scroll;
@@ -481,7 +475,7 @@ button {
       bottom: 300px !important;
     }
     @media screen and (max-width: 765px) {
-      bottom: 350px !important;
+      display: none;
     }
   }
 }
@@ -693,6 +687,7 @@ button {
   justify-content: center;
   padding-top: 8rem;
   margin-bottom: 5rem;
+  z-index: 9999 !important;
   h2 {
     color: var(--color-titles);
     position: relative;

@@ -176,7 +176,7 @@
   }
 }
 
-@media (max-width: 437px) {
+@media (max-width: 492px) {
   .main-title {
     padding-top: 6rem;
     margin-bottom: 2rem;
@@ -205,5 +205,19 @@
 
   .about-page {
     padding-bottom: 25rem;
+  }
+}
+
+@media (max-width: 385px) {
+  .main-title {
+    padding-top: 6rem;
+    margin-bottom: 2rem;
+    h2 {
+      font-size: 2.8rem;
+      .bg-text {
+        font-size: 3.4rem;
+        line-height: 7rem;
+      }
+    }
   }
 }

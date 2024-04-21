@@ -9,7 +9,7 @@ function Portfolio() {
   let y = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
 
   return (
-    <motion.div style={{ y }}>
+    <motion.div style={{ y, overflow: "hidden" }}>
       <section className="portfolio" id="portfolio">
         <RightReveal>
           <div className="main-title">

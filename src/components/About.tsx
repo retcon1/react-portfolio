@@ -107,7 +107,7 @@ function About() {
                 <span className="alt-highlight"> you</span> achieve their goals faster.
               </p>
             </Reveal>
-            <RightReveal>
+            <LeftReveal>
               <div className="btn-container">
                 <a
                   href="https://drive.google.com/file/d/1rtcUfH2vSqX1fzBqs0FCOvvAYhfwFsVQ/view?usp=sharing"
@@ -123,13 +123,13 @@ function About() {
                   </span>
                 </a>
               </div>
-            </RightReveal>
+            </LeftReveal>
           </div>
         </div>
         <div className="skills">
-          <RightReveal>
+          <LeftReveal>
             <h4>My Skills</h4>
-          </RightReveal>
+          </LeftReveal>
           <LeftReveal>
             <Tech />
           </LeftReveal>

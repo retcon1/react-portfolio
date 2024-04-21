@@ -3,7 +3,7 @@ import { AiFillGithub } from "react-icons/ai";
 import { BiLogoYoutube } from "react-icons/bi";
 import { FaLocationDot, FaEnvelope, FaPhone } from "react-icons/fa6";
 import Form from "./Form";
-import { LeftReveal, Reveal, RightReveal } from "./utils/Reveals";
+import { LeftReveal, Reveal } from "./utils/Reveals";
 
 function Contact() {
   return (
@@ -29,11 +29,10 @@ function Contact() {
           </Reveal>
           <Reveal color="var(--color-accent)">
             <p>
-              I'm currently located in Manchester, a fantastic tech hub! I can
-              work completely remotely though and have an excellent home setup
-              so that our communication will always be top-notch whenever you
-              need me. Hybrid or relocating outside of Manchester is always an option too,
-              let's talk possibilities!
+              I'm currently located in Manchester, a fantastic tech hub! I can work completely
+              remotely though and have an excellent home setup so that our communication will always
+              be top-notch whenever you need me. Hybrid or relocating outside of Manchester is
+              always an option too, let's talk possibilities!
             </p>
           </Reveal>
           <LeftReveal>
@@ -44,9 +43,7 @@ function Contact() {
                   <span>Location</span>
                 </div>
                 <p>
-                  <span className="alt-highlight">
-                    Manchester, United Kingdom
-                  </span>
+                  <span className="alt-highlight">Manchester, United Kingdom</span>
                 </p>
               </div>
               <div className="contact-item">
@@ -109,9 +106,9 @@ function Contact() {
           </LeftReveal>
         </div>
         <div className="right-contact">
-          <RightReveal>
+          <LeftReveal>
             <Form />
-          </RightReveal>
+          </LeftReveal>
         </div>
       </div>
     </section>
