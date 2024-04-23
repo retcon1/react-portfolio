@@ -25,7 +25,6 @@ const dropIn = {
 };
 
 interface ModalProps {
-  modalOpen: number;
   handleClose(): void;
   content: ReactNode;
 }

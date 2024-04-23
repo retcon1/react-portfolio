@@ -374,96 +374,6 @@ button {
         border-radius: 15px;
       }
     }
-
-    .backdrop {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      z-index: 2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      .modal {
-        box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
-        padding: 1rem 2rem;
-        width: auto;
-        max-width: 700px;
-        position: relative; /* Set to relative */
-        transform: translate(50vh, 50vh); /* Center the modal */
-        // top: 70vh; /* Position it 50% from the top */
-        // left: 50%; /* Position it 50% from the left */
-        background: linear-gradient(var(--color-accent) 40%, var(--color-primary) 100%);
-        border-radius: 50px;
-        z-index: 9999;
-        overflow: scroll;
-
-        .exit {
-          cursor: pointer;
-          position: absolute;
-          top: 20px;
-          right: 25px;
-        }
-
-        h3 {
-          text-transform: uppercase;
-          text-shadow: #000;
-          font-size: 2rem;
-          margin: 0.5rem 0;
-          text-align: center;
-        }
-        p {
-          margin: 1rem 0;
-          font-size: 1rem;
-          text-align: center;
-        }
-        .tech {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          p {
-            margin: 0.4rem 0.3rem;
-            padding: 0.2rem 0.6rem;
-            background-color: var(--color-grey-1);
-            border-radius: 20px;
-            display: inline-block;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            font-weight: 500;
-            color: var(--color-black);
-          }
-        }
-        .icons {
-          display: flex;
-          justify-content: center;
-          .icon {
-            background-color: var(--color-primary);
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 1rem;
-            cursor: pointer;
-            transition: var(--transition);
-            .i {
-              font-size: 5rem;
-              color: var(--color-white);
-              margin: 0 0.5rem;
-            }
-
-            &:hover {
-              background-color: var(--color-white);
-              .i {
-                color: var(--color-primary);
-              }
-            }
-          }
-        }
-      }
-    }
   }
 
   // needed so the arrow doesn't break through to the next page
@@ -476,6 +386,91 @@ button {
     }
     @media screen and (max-width: 765px) {
       display: none;
+    }
+  }
+}
+
+// Modals
+.backdrop {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0; left: 0; bottom: 0; right: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .modal {
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
+    padding: 1rem 2rem;
+    min-width: 300px;
+    max-width: 700px;
+    background: linear-gradient(var(--color-primary) 20%, var(--color-accent) 100%);
+    border-radius: 50px;
+    z-index: 999;
+
+    .exit {
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 25px;
+    }
+
+    h3 {
+      text-transform: uppercase;
+      text-shadow: #000;
+      font-size: 2rem;
+      margin: 0.5rem 0;
+      text-align: center;
+    }
+    p {
+      margin: 1rem 0;
+      font-size: 1rem;
+      text-align: center;
+    }
+    .tech {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      p {
+        margin: 0.4rem 0.3rem;
+        padding: 0.2rem 0.6rem;
+        background-color: var(--color-grey-1);
+        border-radius: 20px;
+        display: inline-block;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: var(--color-black);
+      }
+    }
+    .icons {
+      display: flex;
+      justify-content: center;
+      .icon {
+        background-color: var(--color-primary);
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 1rem;
+        cursor: pointer;
+        transition: var(--transition);
+        .i {
+          font-size: 5rem;
+          color: var(--color-white);
+          margin: 0 0.5rem;
+        }
+
+        &:hover {
+          background-color: var(--color-white);
+          .i {
+            color: var(--color-primary);
+          }
+        }
+      }
     }
   }
 }
