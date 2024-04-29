@@ -15,29 +15,30 @@ function Hello() {
         <div className="left-header">
           <div className="image">
             <LeftReveal>
-              <img src={Hero} alt="JavaScript Developer Ben Lucas in a coat, on a mountain with a blue sky background" />
+              <img
+                src={Hero}
+                alt="JavaScript Developer Ben Lucas in a coat, on a mountain with a blue sky background"
+              />
             </LeftReveal>
           </div>
         </div>
         <div className="right-header">
           <Reveal>
             <h1 className="name">
-              Hi, I'm <span className="name">Ben Lucas</span> <br />A Full-Stack
-              JavaScript Developer.
+              Hi, I'm <span className="name">Ben Lucas</span> <br />A Full-Stack JavaScript
+              Developer.
             </h1>
           </Reveal>
           <Reveal>
             <p>
-              I'm a determined problem solver, putting my natural instincts into
-              action through
-              <span className="highlight"> JavaScript Development.</span> I'm
-              happy to help in all areas of development, whether you need a
-              database or API setup and maintained with easily understood
-              endpoints. Or making your website a sleeker, more user-friendly
+              I am a determined problem solver, channeling my natural instincts into
+              <span className="highlight"> JavaScript Development</span>. I am happy to assist in
+              all areas of development, from setting up and maintaining databases or APIs with
+              comprehensible endpoints, to enhancing your website for a sleeker, more user-friendly
               experience.
               <br />
-              Please don't hesitate to contact me if you think we'd be a good
-              match!
+              <br />
+              Feel free to reach out if you believe we could make a great team!
             </p>
           </Reveal>
           <div className="btn-container">
