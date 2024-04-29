@@ -2,7 +2,6 @@ import React from "react";
 import BoxCanvas from "./canvas/Box";
 import { technologies } from "../assets/tech";
 import { isMobile } from "react-device-detect";
-import { Tilt } from "react-tilt";
 
 function Tech() {
   if (isMobile)
@@ -10,10 +9,10 @@ function Tech() {
       <ul className="tech-container">
         {technologies.map((tech) => (
           <li key={tech.name}>
-            <Tilt options={{ scale: 1 }} className="tech-card">
+            <div className="tech-card">
               <img src={tech.icon} alt={tech.name} loading="lazy" />
               <h5>{tech.name}</h5>
-            </Tilt>
+            </div>
           </li>
         ))}
       </ul>
