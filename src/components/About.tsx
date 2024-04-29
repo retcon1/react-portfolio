@@ -96,15 +96,23 @@ function About() {
             </div>
             <Reveal color="var(--color-accent)">
               <p>
-                After years of being passionate about technology, from gaming to PC building, video
-                production and beyond, my innate desire to help people solve their problems with
-                tech has brought me to coding; the place where I can make the biggest difference for
-                the most amount of people!
+                With a longstanding passion for technology, spanning from gaming, PC building to
+                video production and beyond, I've always been driven to help others solve their
+                tech-related challenges. This passion has led me to the world of coding, where I
+                believe I can make a significant impact on a large scale.
                 <br />
                 <br />
-                Now, after diving in head-first through the Northcoders Software Development
-                Bootcamp, I'm training every day to become a better programmer to help people like
-                <span className="alt-highlight"> you</span> achieve their goals faster.
+                After immersing myself in the Northcoders Software Development Bootcamp, I am
+                committed to honing my programming skills daily to assist people like
+                <span className="alt-highlight"> you</span> in achieving their goals more
+                efficiently.
+                <br />
+                <br />
+                In addition to graduating from Northcoders, I have also completed the Digital
+                Futures Academy to further enhance my skills. I am currently seeking a role through
+                Digital Futures where I can apply those skills and continue my growth as a
+                developer. My eagerness to learn and connect with people fuels my ambition to excel
+                in this field.
               </p>
             </Reveal>
             <LeftReveal>
@@ -131,7 +139,7 @@ function About() {
             <h4>My Skills</h4>
           </LeftReveal>
           <LeftReveal>
-           <Tech />
+            <Tech />
           </LeftReveal>
         </div>
         <Arrow section="#portfolio" />
