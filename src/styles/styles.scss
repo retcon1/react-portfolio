@@ -322,6 +322,21 @@ button {
         height: 140px;
         margin: -5px;
       }
+      .tech-card {
+        width: 80px;
+        height: 80px;
+        margin: 5px;
+        h5 {
+          font-size: 1rem;
+          text-align: center;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          max-height: 80px;
+          border-radius: 15px;
+        }
+      }
     }
   }
   .arrow {
@@ -378,8 +393,7 @@ button {
 
   // needed so the arrow doesn't break through to the next page
   .arrow {
-    position: relative !important;
-    width: 1%;
+    width: 50%;
     bottom: 150px !important;
     @media screen and (max-width: 1822px) {
       bottom: 300px !important;

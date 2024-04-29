@@ -1,4 +1,4 @@
-import { LeftReveal, Reveal, RightReveal } from "./utils/Reveals";
+import { LeftReveal, Reveal } from "./utils/Reveals";
 import { FaFileArrowDown, FaLayerGroup } from "react-icons/fa6";
 import Tech from "./Tech";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -131,7 +131,7 @@ function About() {
             <h4>My Skills</h4>
           </LeftReveal>
           <LeftReveal>
-            <Tech />
+           <Tech />
           </LeftReveal>
         </div>
         <Arrow section="#portfolio" />
