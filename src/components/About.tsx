@@ -52,7 +52,8 @@ function About() {
                   of Agile development when working on a group project in a team of 7, alongside 2
                   other teams which we had to communicate with to ensure our project was successful.
                   Now I look forward to putting my new skills to use in the industry when being
-                  placed with one of Digital Futures' clients.
+                  placed with one of Digital Futures' clients or finding a role elsewhere,
+                  potentially with you!
                 </p>
               </Reveal>
             </div>
@@ -109,10 +110,9 @@ function About() {
                 <br />
                 <br />
                 In addition to graduating from Northcoders, I have also completed the Digital
-                Futures Academy to further enhance my skills. I am currently seeking a role through
-                Digital Futures where I can apply those skills and continue my growth as a
-                developer. My eagerness to learn and connect with people fuels my ambition to excel
-                in this field.
+                Futures Academy to further enhance my skills and prove that I can constantly grow
+                and adapt to a variety of challenges. My eagerness to learn and connect with people
+                fuels my ambition to excel in this field.
               </p>
             </Reveal>
             <LeftReveal>
