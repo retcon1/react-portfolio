@@ -49,6 +49,10 @@
 
   .portfolios {
     grid-template-columns: 1fr 1fr;
+    .portfolio-card {
+      width: 262.5px !important;
+      height: 375px !important;
+    }
   }
 }
 
@@ -141,6 +145,11 @@
   .portfolios {
     padding-bottom: 6rem;
     margin-top: 1rem;
+
+    .portfolio-card {
+      width: 210px !important;
+      height: 300px !important;
+    }
   }
 }
 
@@ -206,6 +215,13 @@
   .about-page {
     padding-bottom: 25rem;
   }
+
+  .portfolios {
+    .portfolio-card {
+      width: 175px !important;
+      height: 250px !important;
+    }
+  }
 }
 
 @media (max-width: 385px) {
@@ -218,6 +234,13 @@
         font-size: 3.4rem;
         line-height: 7rem;
       }
+    }
+  }
+
+  .portfolios {
+    .portfolio-card {
+      width: 120px !important;
+      height: 200px !important;
     }
   }
 }

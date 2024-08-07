@@ -4,13 +4,53 @@ import port2 from "../img/port2.webp";
 import port3 from "../img/port3.webp";
 import port4 from "../img/port4.webp";
 import port5 from "../img/port5.webp";
-import { BiLogoYoutube, BiSolidDice6 } from "react-icons/bi";
+import port6 from "../img/port6.webp";
+import { BiLogoYoutube, BiSolidDice6, BiTv } from "react-icons/bi";
 import { GiCommercialAirplane } from "react-icons/gi";
 import { FaDice } from "react-icons/fa6";
 export const projects = [
   {
     id: 1,
     image: port1,
+    modalContent: (
+      <>
+        <h3>trackTV</h3>
+        <div className="tech">
+          <p>TypeScript</p>
+          <p>NextJS</p>
+          <p>Tailwind CSS</p>
+          <p>Firebase</p>
+        </div>
+        <p>
+          A passion project and my first foray into NextJS. This site allows users to track their TV
+          shows. The user can search for a show and add it to their watchlist. The user can also
+          mark the show as watched and rate it. The site uses Firebase for authentication and
+          Firestore for the database. Fully hosted on Vercel, make an account and get started!
+        </p>
+        <div className="icons">
+          <a
+            href="https://github.com/retcon1/track-tv"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="icon"
+          >
+            <AiFillGithub className="i" />
+          </a>
+          <a
+            href="https://track-tv.vercel.app/"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="icon"
+          >
+            <BiTv className="i" />
+          </a>
+        </div>
+      </>
+    ),
+  },
+  {
+    id: 2,
+    image: port2,
     modalContent: (
       <>
         <h3>Ben's Boardgame Bazaar</h3>
@@ -57,8 +97,8 @@ export const projects = [
     ),
   },
   {
-    id: 2,
-    image: port2,
+    id: 3,
+    image: port3,
     modalContent: (
       <>
         <h3>Cosmic Conflict</h3>
@@ -108,8 +148,8 @@ export const projects = [
     ),
   },
   {
-    id: 3,
-    image: port3,
+    id: 4,
+    image: port4,
     modalContent: (
       <>
         <h3>House of Games</h3>
@@ -145,8 +185,8 @@ export const projects = [
     ),
   },
   {
-    id: 4,
-    image: port4,
+    id: 5,
+    image: port5,
     modalContent: (
       <>
         <h3>Planet Press</h3>
@@ -178,8 +218,8 @@ export const projects = [
     ),
   },
   {
-    id: 5,
-    image: port5,
+    id: 6,
+    image: port6,
     modalContent: (
       <>
         <h3>Travel2U</h3>
